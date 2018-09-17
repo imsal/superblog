@@ -26,7 +26,7 @@ class SubscribersController < ApplicationController
     if @subscriber.save
       redirect_back fallback_location: root_url, notice: 'You have subscribed!'
     else
-      redirect_back fallback_location: root_url, notice: 'Sorry, there was an error.'
+      redirect_back fallback_location: root_url, alert: 'Sorry, there was an error.'
     end
 
   end

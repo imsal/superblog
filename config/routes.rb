@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
 
-  get 'display/tester', to: 'display#tester'
-  resources :subscribers, only: %i[new create]
+
+  # resources :subscribers, only: %i[new create update edit destroy]
 
   # get 'errors/not_found'
   # get 'errors/unacceptable'
@@ -21,7 +21,9 @@ Rails.application.routes.draw do
     delete :delete_attachment, to: 'attachment_control#delete_attachment', as: 'delete_attachment'
     resources :categories, param: :slug, except: :show
     resources :inquiries, only: %i[index new create destroy]
-    resources :subscribers, only: %i[index edit update destroy]
+    # resources :subscribers, only: %i[index edit destroy]
+    # get '/subscribers', to: 'subscribers#index'
+    resources :subscribers
     end
 
   ### Resetting resources here
