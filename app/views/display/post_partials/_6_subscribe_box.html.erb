@@ -1,0 +1,20 @@
+<div class="container">
+
+
+<div class="subscribe-box-container">
+  <div class="subscribe-box" id="subscribe-box-follow">
+    <div class="subscribe-text">
+      <p>Become one of 1000+ people that love getting email gold</p>
+    </div>
+
+    <div class="subscribe-form">
+      <%= form_for Subscriber.new do |f| %>
+
+      <%= f.text_field :email, placeholder: 'myemail@domain.com' %>
+
+      <%= f.submit 'subscribe' %>
+    <% end %>
+  </div>
+</div>
+</div>
+</div>

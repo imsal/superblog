@@ -1,0 +1,38 @@
+.pagination {
+
+  // background-image: url('connectwork.png');
+  // background-repeat: repeat;
+
+  margin: 3rem auto;
+  text-align: center;
+  display: block;
+
+  .disabled {
+    display: none;
+  }
+
+  a.previous_page {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  em.current {
+    background-color: rgba(184,64,21, 1);//#4CAF50;
+    color: #fff !important;
+    border: 1px solid rgba(184,64,21, 1);//#4CAF50;
+  }
+  a.next_page {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  a, em.current {
+
+    color: black;
+    // float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+
+  }
+}

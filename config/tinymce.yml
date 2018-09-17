@@ -1,0 +1,20 @@
+default:
+  height: 500
+  menubar: false,
+  statusbar: false,
+  toolbar:
+    - styleselect | undo redo | cut copy paste pastetext selectall | spellchecker | code | fullscreen | searchreplace
+    - bold italic underline | strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | blockquote | image link media table | codesample | bullist numlist
+  plugins:
+    - image
+    - link
+    - table
+    # - bullist
+    # - numlist
+    - code
+    - codesample
+    - autoresize
+    - media
+    - table
+    - searchreplace
+    - fullscreen

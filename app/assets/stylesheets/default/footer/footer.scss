@@ -1,0 +1,141 @@
+.main-footer {
+  // padding: 2.5rem;
+  background-color: #158db8;
+  color: white;
+
+  .row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .col-1 {
+      padding: 2.5rem;
+      // height: 100%;
+      box-sizing: border-box;
+      margin: auto;
+
+        h4 {
+          text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        h5 {
+          text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+
+      h4,
+      h5 {
+        margin-bottom: 0.3em;
+      }
+
+      p {
+        margin: 1em 0;
+        font-size: 0.9em;
+      }
+
+    }
+
+    .col-2 {
+      padding: 2.5rem;
+      box-sizing: border-box;
+
+      form {
+        width: 80%;
+        margin: auto;
+
+        h4 {
+          margin-bottom: 0.5em;
+          text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        input[type="text"], textarea {
+          width: 100%;
+          margin-bottom: 1rem;
+          box-sizing: border-box;
+        }
+        button {
+          display: block;
+          width: 50%;
+          background-color: #16637f;
+          border: 2px solid #16637f;
+          &:hover {
+            cursor: pointer;
+            color: #16637f;
+            border: 2px solid #16637f;
+            background-color: #fff;
+          }
+        }
+      }
+
+    }
+  }
+}
+@media all and (max-width: 979px) {
+  .main-footer {
+    .row {
+      display: block;
+
+      .col-1 {
+        border: 0;
+        padding-bottom: 0;
+
+        .wrapper {
+          position: static;
+        }
+
+        ul.footer-link-wrapper {
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+
+      .col-2 {
+        border: 0;
+
+        form {
+          padding: 0;
+          width: 100%;
+            input[type="text"],
+            textarea {
+              width: 100%;
+            }
+        }
+
+      }
+    }
+  }
+}
+
+
+footer.bottom-footer {
+  background-color: #16637f;
+ padding: 2.5rem;
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    li {
+      padding: 1rem;
+      flex: 1;
+              text-align: center;
+      a.social-media-link {
+        font-size: 1.8em;
+      }
+
+      a {
+
+          font-size: 1em;
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @media only screen and (max-width: 519px) {
+            .hide-in-mobile {
+              display: none;
+            }
+          }
+      }
+    }
+  }
+}

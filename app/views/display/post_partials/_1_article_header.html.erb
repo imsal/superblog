@@ -1,0 +1,27 @@
+<!-- ~~~~~~~~~~~~~~~ POST HEAD ~~~~~~~~~~~~~~~ -->
+<div class="container">
+  <div class="article-header">
+
+    <%= render 'shared/title_border' %>
+
+    <%= link_to @post.category.name, display_category_path(@post.category), class: 'category-link' %>
+
+    <% if @post.tags.any? %>
+      <div class="tag-link-list">
+        <ul>
+          <% @post.tags.each do |tag| %>
+            <li><%= link_to tag, tag_path(tag.name) %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h1><%= @post.title %></h1>
+
+    <p><span>Published:</span>
+      <%= @post.created_at.strftime("%B %d, %Y") %></p>
+
+      <%= render 'shared/title_border' %>
+
+  </div>
+</div>

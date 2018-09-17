@@ -1,0 +1,20 @@
+
+  .post-hero-image-block {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 40%;
+
+    .post-hero-image {
+      background-position: center;
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+
+  }

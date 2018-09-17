@@ -1,0 +1,35 @@
+
+<section class="welcome-page-full-hero">
+
+  <div class="hero-text">
+    <!-- <h1>Prove Your Wealth</h1>
+    <h1>is so amazing!</h1> -->
+      <h1 class="impact">ProveYourWealth</h1>
+  </div>
+
+</section>
+
+<%= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
+<%= render 'shared/card_list_layout', iteration: Post.last(6)  %>
+
+
+<%= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
+<%= render 'shared/card_list_layout', iteration: Post.last(6)  %>
+
+
+<div class="welcome-subscribe-box-container">
+  <div class="welcome-subscribe-box">
+    <div class="welcome-subscribe-text">
+
+      <p>Subscribe... <span>before it's too late!</span></p>
+    </div>
+
+    <div class="welcome-subscribe-form">
+    <%= form_for Subscriber.new do |f| %>
+      <%= f.text_field :email, placeholder: 'myemail@domain.com' %>
+
+    <%= f.submit 'subscribe' %>
+  <% end %>
+  </div>
+  </div>
+</div>

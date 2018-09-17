@@ -1,0 +1,72 @@
+<footer class="main-footer">
+  <div class="row">
+    <div class="col-1">
+
+
+        <h4 class="impact">THIS SHOULD BE A COMPANY SLOGAN</h4>
+        <h5 class="impact">mycompanyname.com</h5>
+
+        <p>We review movies on netflix, hulu, amazon, and anything else.</p>
+        <p>My Company Name Copyright
+          <%= Time.now.strftime('%Y') %>
+          &copy;</p>
+
+
+    </div>
+
+    <div class="col-2">
+
+      <%=form_for Inquiry.new do |f| %>
+      <h4 class="impact">Contact</h4>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: 'your name' %>
+
+      <%= f.label :email, 'Email Address' %>
+      <%= f.text_field :email, placeholder: 'your email address' %>
+
+      <%= f.label :message %>
+      <%= f.text_area :message, placeholder: 'your message' %>
+
+      <%= button_tag(type: "submit") do %>
+        <i class="fa fa-paper-plane"></i>
+      <% end %>
+
+    <% end %>
+
+  </div>
+
+</div>
+
+</footer>
+
+<footer class="bottom-footer">
+
+  <ul>
+    <li>
+      <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-media-link">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-media-link">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+  </ul>
+  <ul>
+
+    <li>
+      <a href="#">Site<span class="hide-in-mobile"> Map</span></a>
+      <!-- https://www.xml-sitemaps.com/ -->
+    </li>
+
+    <li>
+      <a href="#">Privacy<span class="hide-in-mobile"> Policy</span></a>
+    </li>
+
+    <li>
+      <a href="#">Terms<span class="hide-in-mobile"> of Use</span></a>
+    </li>
+  </ul>
+</footer>

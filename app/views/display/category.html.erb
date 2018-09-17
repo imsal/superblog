@@ -1,0 +1,5 @@
+<%= provide(:title, @category.name) %>
+
+<%= render 'shared/card_list_layout', title: @category.name, iteration: @posts  %>
+
+<%= will_paginate @posts %>

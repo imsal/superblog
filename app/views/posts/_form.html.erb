@@ -1,0 +1,93 @@
+<%= tinymce_assets %>
+
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h1><%= form_title %></h1>
+
+  <div class="field">
+    <%= form.label :title, 'Title: 60 characters left', id: 'post_title_char_count' %>
+    <%= form.text_field :title, id: :post_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :summary %>
+    <%= form.text_area :summary, id: :post_summary %>
+  </div>
+
+  <div class="field">
+  <%= form.label :main_image %>
+  <%= form.file_field :main_image %>
+</div>
+
+<% if post.main_image.attached? %>
+  <%= image_tag rails_blob_url(post.main_image), style: 'height: 100px; width: auto;' %>
+  <%= link_to 'Delete Main Image', delete_attachment_url(id: post.main_image.id),
+                              method: :delete,
+                              confirm: { data: 'Are you sure?' },
+                              style: 'display: block;' %>
+<% end %>
+
+<div class="field">
+<%= form.label :images %>
+<%= form.file_field :images, multiple: true %>
+</div>
+
+<% if post.images.any? %>
+<% post.images.each_with_index do |img, index| %>
+  <%= image_tag rails_blob_url(img), style: 'height: 100px; width: auto; display: inline-block;' %>
+  <%= link_to "Delete image-holder-#{index+1}", delete_attachment_url(id: img.id),
+                              method: :delete,
+                              confirm: { data: 'Are you sure?' },
+                              style: 'display: block;' %>
+  <% end %>
+<% end %>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, options_from_collection_for_select(Category.all, :id, :name), id: :post_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag_list %>
+    <%= form.text_field :tag_list, id: :post_tag_list, value: form.object.tag_list.to_s %>
+  </div>
+
+  <!-- <p>Possible tags to include: a, b, h1-h6, hr, i, img, ol, ul, li, p, s, table, thead, tbody, td, th, tr, blockquote, u.</p> -->
+
+  <p>Specify Images by using: </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="image-holder" id="image-holder-1"&gt;&lt;/div&gt;</p>
+
+
+
+
+  <div class="field">
+    <%#= form.label :body %>
+    <%= form.text_area :body, class: 'tinymce', id: :post_body, :rows => 40, :cols => 120 %>
+  </div>
+
+    <%= tinymce %>
+
+
+
+
+  <div class="field">
+    <%= form.label :activation_date %>
+    <%= form.text_field :activation_date, id: :post_activation_date, data:{ provide:'datepicker'} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

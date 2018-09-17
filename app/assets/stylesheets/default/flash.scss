@@ -1,0 +1,35 @@
+.flash-message {
+
+  &.error {
+    border: solid 4px #900;
+    background-color: #FF6565;
+  }
+
+  &.notice {
+    border: solid 4px #26722D;
+    background-color: #A4E7A0;
+  }
+
+  color: black;
+  z-index: 3;
+  position: fixed;
+  font-weight: bold;
+  width: 96%;
+  margin: 2%;
+  padding: 1%;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  p {
+    // text-align: center;
+    font-size: 110%;
+    margin: 15px 0;
+  }
+
+  // &:hover {
+  //   cursor: pointer;
+  // }
+}

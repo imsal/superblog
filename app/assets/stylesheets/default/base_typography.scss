@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Playfair+Display');
+
+// font-family: 'Playfair Display', serif;
+// font-family: 'IBM Plex Serif', serif;
+// font-family: 'Impact'; VIA <h1 class="impact">BLAH</h1>
+
+body {
+  font-family: 'IBM Plex Serif', serif;
+  // Set Default Font Type
+  // Set Base Font Size
+  font-size: 17px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: asset-url('impact.ttf');
+}
+
+.impact {
+  font-family: Impact,Arial Black,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,sans serif;
+}
+
+h1 {
+  font-size: 4.2em;
+ }
+
+h2 {
+  font-size: 3.5em;
+}
+
+
+h3 {
+  font-size: 2.17em;
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  font-size: 1.5em;
+  letter-spacing: 0.01em;
+}
+
+h5 {
+  font-size: 1.2em;
+  letter-spacing: 0.01em;
+}
+
+h6 {
+  font-size: 1em;
+  letter-spacing: 0.01em;
+}
+
+
+p {
+  font-size: 1.3em;
+  line-height: 1.7em;
+}

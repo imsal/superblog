@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%#= render 'layouts/meta_tags' %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= render 'application/favicon' %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    </head>
+
+  <body>
+
+
+
+    <%= render 'layouts/header' %>
+
+    <!-- The Modal -->
+    <div id="wait-dont-leave" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="close-pop-up">&times;</span>
+        <p>Wait dont leave - subscribe first!</p>
+      </div>
+
+    </div>
+
+    <% if notice || alert %>
+  <div class="flash-message <%= notice ? "notice" : ""%><%= alert ? "error" : ""%>">
+        <% if notice %>
+          <p><%= notice %> <br/>Click me to remove.</p>
+        <% elsif alert %>
+          <p><%= alert %> <br/>Click me to remove.</p>
+        <% end %>
+  </div>
+<% end %>
+
+
+
+
+    <!-- NOTE: Maybe create a secondary layout for admin/dashboard users only -->
+    <% if page_is_dashboard? %>
+      <div class="dashboard-wrapper">
+      <%= render 'dashboard/dashboard_sidebar' %>
+      <div class="dashboard">
+    <% end %>
+
+
+
+
+
+      <%= yield %>
+
+
+
+
+    <% unless page_is_dashboard? %>
+    <%= render 'layouts/footer' %>
+    <% end %>
+
+
+
+    <% if Rails.env.development? %>
+    <div class="params">
+      <%= debug(params) %>
+    </div>
+    <% end %>
+
+
+
+
+
+
+
+  </body>
+</html>

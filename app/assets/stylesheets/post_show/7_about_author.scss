@@ -1,0 +1,37 @@
+
+.about-author-alt {
+
+  @media only screen and (min-width: 940px) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .author-left-col {
+padding: 1rem;
+    img {
+      width: 100px;
+      height: 100px;
+      // width: 80%;
+      height: auto;
+      margin: auto;
+      border-radius: 100%;
+      vertical-align: middle;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  .author-right-col {
+    padding: 1rem;
+
+    h5 {
+      font-size: 1.1em;
+      font-weight: bold;
+      padding-bottom: 0.2em;
+      border-bottom: 2px solid #000;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
+
+}

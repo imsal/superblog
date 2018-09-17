@@ -1,0 +1,94 @@
+#card-container {
+  #card-wrapper {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    border-bottom: 0.01em solid #E6E6E6;
+
+    .article-link {
+      display: inline-block;
+
+      text-decoration: none;
+      box-sizing: border-box;
+
+      &:hover {
+        cursor: pointer;
+
+        article {
+          transition: 0.5s;
+
+          .card-contents {
+            .card-title {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      article {
+        margin: 2rem;
+
+        transition: all .2s ease;
+vertical-align: middle;
+//display: inline-block; /* change the default display type to inline-block */
+ overflow: hidden;
+
+        .card-image {
+          padding-bottom: 70%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          margin-bottom: 1rem;
+          border: 2px solid black;
+          box-sizing: border-box;
+
+          .card-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 12px;
+            background-color: rgba(184,64,21, 0.9);
+            color: white;
+            // font-family: Impact;
+            letter-spacing: 0.05em;
+            text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+          }
+        }
+
+        .card-contents {
+          background-color: #fff;
+
+          .card-title {
+            font-size: 1.2em;
+            line-height: 1.4em;
+            letter-spacing: 0.02em;
+            color: #000;
+            font-weight: bold;
+          }
+
+          p {
+            margin-top: 1rem;
+            color: #000;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 615px) {
+  #card-container .three-col {
+    width: 50%;
+  }
+  #card-container .two-col {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 940px) {
+  #card-container .three-col {
+    width: 33.333%;
+  }
+}

@@ -1,0 +1,46 @@
+.next-article-button-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 4rem 0;
+  .next-article-button {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    font-size: 3rem;
+
+
+    a {
+      position: absolute;
+      color: #000;
+      vertical-align: middle;
+      text-decoration: none;
+
+      &:hover h6 {
+        border-bottom: 3px solid #000;
+      }
+      h6 {
+        font-size: 0.35em;
+        display: inline-block;
+        vertical-align: middle;
+        border-bottom: 3px solid transparent;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .next-article-button-left{
+      left: 0;
+      bottom: 0;
+    }
+
+    .next-article-button-right {
+      right: 0;
+      bottom: 0;
+    }
+
+
+  }
+
+
+}

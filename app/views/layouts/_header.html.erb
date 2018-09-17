@@ -1,0 +1,50 @@
+<header class="header no-highlight impact" id="nav-bar-menu">
+
+  <a class="expand-menu-button" href="javascript:void(0)" id="nav-opener">&#9776;</a>
+
+  <div class="overlay" id="overlay-menu">
+
+    <a href="javascript:void(0)" class="collapse-menu-button" id="nav-closer">&times;</a>
+
+    <div class="overlay-content">
+
+      <ul>
+
+        <% if request.url == root_url %>
+          <li class="active"><%= link_to 'Home', root_url %></li>
+        <% else %>
+          <li><%= link_to 'Home', root_url %></li>
+        <% end %>
+
+        <% Category.order(:id).each do |cat| %>
+
+          <% if is_category_active?(cat) %>
+            <li class="active"><%= link_to cat.name, display_category_path(cat) %></li>
+          <% else %>
+            <li><%= link_to cat.name, display_category_path(cat) %></li>
+          <% end %>
+
+        <% end %>
+
+      </ul>
+    </div>
+    <!-- ./overlay-content -->
+
+  </div>
+  <!-- ./overlay -->
+</header>
+
+<div class="spacer"></div>
+
+<% if controller.controller_name == 'display' && (controller.action_name == 'category' || controller.action_name == 'tags') %>
+<div class="tag-sub-header MagicScroll">
+
+<% ActsAsTaggableOn::Tag.all.each do |tag| %>
+        <% if request.path.split('/').last == tag.name %>
+          <%= link_to tag.name, tag_path(tag.name), class: 'active' %>
+        <% else %>
+          <%= link_to tag.name, tag_path(tag.name) %>
+        <% end %>
+  <% end %>
+</div>
+<% end %>

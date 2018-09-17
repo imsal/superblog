@@ -1,0 +1,26 @@
+
+<div class="container only-side-margins">
+
+    <div class="next-article-button-wrapper">
+      <div class="next-article-button">
+        <% unless is_the_previous_post_first?(@post) %>
+          <%= link_to older_post_path(@post), class: 'next-article-button-left' do %>
+          <i class="fa fa-arrow-left"></i>
+          <!-- <h6><%#= older_post_title(@post) %></h6> -->
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="next-article-button">
+      <% unless is_the_next_post_last?(@post) %>
+        <%= link_to newer_post_path(@post), class: 'next-article-button-right' do %>
+
+        <!-- <h6><%#= newer_post_title(@post) %></h6> -->
+        <i class="fa fa-arrow-right"></i>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+</div>

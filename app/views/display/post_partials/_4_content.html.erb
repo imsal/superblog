@@ -1,0 +1,13 @@
+<div class="container no-top-padding">
+
+  <div id="temp-image-holder">
+    <% @post_images.each_with_index do |img, index| %>
+      <%= image_tag img, id: "post-image-#{index+1}" %>
+    <% end %>
+  </div>
+
+  <div class="post-content">
+    <%= @post.body.html_safe %>
+  </div>
+
+  </div>

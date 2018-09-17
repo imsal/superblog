@@ -1,0 +1,73 @@
+
+<h1>Dashboard</h1>
+
+<h1>Save this page for analytics</h1>
+
+<!-- ~~~~~~~~~~ NEWEST ACTIVE POSTS ~~~~~~~~~~ -->
+
+<h2>Newest Active Posts</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Created</th>
+      <th>Activated</th>
+      <th>Updated</th>
+      <th>Title</th>
+      <th>Page Views</th>
+      <th>Comments</th>
+      <th>Replies</th>
+      <th>Category</th>
+      <th>Tags</th>
+      <th><!-- Leave Blank --></th>
+    </tr>
+  </thead>
+<tbody>
+<% @newest_posts.each do |post| %>
+<tr>
+  <td><%= post.created_at.strftime("%B %d, %Y") %></td>
+  <td><%= post.activation_date.strftime("%B %d, %Y") %></td>
+  <td><%= post.updated_at.strftime("%B %d, %Y") %></td>
+  <td><%= link_to post.title, completed_display_post_path(post), target: '_blank' %></td>
+  <td><%= post.page_count %></td>
+  <td><%= post.category.name %></td>
+  <td></td>
+  <td><%= link_to 'Edit', edit_post_path(post) %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+<!-- ~~~~~~~~~~ NEWEST INACTIVE POSTS ~~~~~~~~~~ -->
+
+<h2>Inactive Posts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Will Activate</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Tags</th>
+      <th><!-- EDIT: Leave Blank --></th>
+    </tr>
+  </thead>
+<tbody>
+<% @inactive_posts.each do |post| %>
+<tr>
+  <td><%= post.created_at.strftime("%B %d, %Y") %></td>
+  <td><%= post.updated_at.strftime("%B %d, %Y") %></td>
+  <% if post.activation_date == nil %>
+    <td>Activation Date Not Set</td>
+  <% else %>
+    <td><%= post.activation_date.strftime("%B %d, %Y") %></td>
+  <% end %>
+  <td><%= link_to post.title, post %></td>
+  <td><%= post.category.name %></td>
+  <td></td>
+  <td><%= link_to 'Edit', edit_post_path(post) %></td>
+</tr>
+<% end %>
+</tbody>
+</table>

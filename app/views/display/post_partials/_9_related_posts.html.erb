@@ -1,0 +1,23 @@
+<div class="related-posts-wrapper">
+
+  <h2>Related Articles</h2>
+
+  <div class="related-posts">
+
+    <% @related_posts.each do |post| %>
+
+      <%= link_to completed_display_post_path(post), class: 'some-container' do %>
+
+      <div class="image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: '980x490') %>)">
+        <div class="text impact"><%= post.title %></div>
+      </div>
+
+      <div class="overlay">
+        <div class="text impact"><%= post.title %></div>
+      </div>
+
+    <% end %>
+
+  <% end %>
+</div>
+</div>

@@ -1,0 +1,109 @@
+.dashboard-wrapper {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  border-top: 2px solid black;
+
+  .dashboard-menu {
+    padding: 10px;
+    border-right: 3px solid black;
+    ul {
+      list-style: none;
+
+      li.menu-title {
+        border-bottom: 1px solid black;
+      }
+
+      li {
+        a {
+          text-decoration: none;
+          color: #0921ea;
+        }
+
+        a:hover {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  .dashboard {
+    padding: 10px;
+
+    h1 {}
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        color: #0921ea;
+      }
+
+      a:hover {
+        text-decoration: line-through;
+      }
+    }
+
+    table td,
+    table th {
+      border: 1px solid #ddd;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+      background-color: #ddd;
+    }
+
+    table th {
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    form {
+      margin: auto;
+      width: 60%;
+      padding: 25px 0;
+
+      h1 {
+      }
+
+      .field {
+        label {
+          display: block;
+        }
+
+        input,
+        select,
+        textarea {
+        }
+
+        input {
+          width: 100%;
+        }
+
+        textarea {
+          width: 100%;
+        }
+      }
+
+      p {
+      }
+
+      input[type="submit"] {
+        border: 2px solid black;
+        color: black;
+
+        &:hover {
+          background-color: black;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

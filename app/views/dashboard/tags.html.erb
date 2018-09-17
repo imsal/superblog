@@ -1,0 +1,24 @@
+<h1>Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Taggings Count</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+<% @tags.each do |tag| %>
+<tr>
+  <td><%= tag.name %></td>
+  <td><%= tag.taggings_count %></td>
+  <td><%= link_to 'View', tag_path(tag.name), target: '_blank' %></td>
+</tr>
+
+<% end %>
+  </tbody>
+</table>

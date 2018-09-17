@@ -1,0 +1,21 @@
+<footer class="sub-footer">
+<div class="footer-hr-wrapper">
+  <div class="footer-hr">
+    <!-- blank -->
+  </div>
+  <h6>TAGS</h6>
+  <div class="footer-hr">
+    <!-- blank -->
+  </div>
+</div>
+<div class="tag-cloud">
+  <ul>
+    <% ActsAsTaggableOn::Tag.all.each do |tag| %>
+      <li><%= link_to tag.name, tag_path(tag.name) %></li>
+    <% end %>
+  </ul>
+</div>
+<div class="bottom-footer-hr">
+  <!-- blank -->
+</div>
+</footer>

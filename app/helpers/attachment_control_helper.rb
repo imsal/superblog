@@ -1,0 +1,2 @@
+module AttachmentControlHelper
+end
