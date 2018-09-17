@@ -25,8 +25,8 @@
     </div>
 
     <div class="welcome-subscribe-form">
-    <%= form_for Subscriber.new do |f| %>
-      <%= f.text_field :email, placeholder: 'myemail@domain.com' %>
+    <%= form_for 'sub', url: subscribe_path do |f| %>
+      <%= f.text_field 'email_address', placeholder: 'myemail@domain.com' %>
 
     <%= f.submit 'subscribe' %>
   <% end %>

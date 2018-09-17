@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
 
+  get '/subscribe', to: 'subscribe#new', as: 'subscribe'
+  post '/subscribe', to: 'subscribe#create'
 
-  resources :authors
+
+
+
+
+
   # resources :subscribers, only: %i[new create update edit destroy]
 
   # get 'errors/not_found'
@@ -11,6 +17,7 @@ Rails.application.routes.draw do
   # get 'not_found/unacceptable'
   # get 'not_found/internal_error'
   # localhost:3000/
+
   root 'welcome#index'
 
   # localhost:3000/dashboard/
@@ -24,8 +31,7 @@ Rails.application.routes.draw do
     resources :inquiries, only: %i[index new create destroy]
     # resources :subscribers, only: %i[index edit destroy]
     # get '/subscribers', to: 'subscribers#index'
-    resources :subscribers
-    end
+      end
 
   ### Resetting resources here
 
