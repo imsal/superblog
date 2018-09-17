@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/codahale/bcrypt-ruby.git
+  revision: 12a50f4ff20c1723cc08b3f3c5dcd257c305172c
+  specs:
+    bcrypt (3.1.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -239,6 +245,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 6.0)
   aws-sdk-s3
+  bcrypt!
   bootsnap (>= 1.1.0)
   bullet
   byebug

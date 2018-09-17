@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  resources :authors
   # resources :subscribers, only: %i[new create update edit destroy]
 
   # get 'errors/not_found'
