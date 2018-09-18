@@ -26,7 +26,6 @@ class SubscribeController < ApplicationController
     final_response = response.read_body # use final response for error handling -- if error_count > 0 ....
 
     # if final_response
-
     redirect_to root_url, notice: 'You have subscribed! Yay!'
   end
 

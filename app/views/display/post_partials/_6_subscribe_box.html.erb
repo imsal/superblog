@@ -3,16 +3,13 @@
 
 <div class="subscribe-box-container">
   <div class="subscribe-box" id="subscribe-box-follow">
+
     <div class="subscribe-text">
-      <p>Become one of 1000+ people that love getting email gold</p>
+      <p>Become one of 1000+ <span class="hide-on-mobile">people that love getting email gold</span></p>
     </div>
 
     <div class="subscribe-form">
-    <%= form_for 'sub', url: subscribe_path do |f| %>
-      <%= f.text_field 'email_address', placeholder: 'myemail@domain.com' %>
-
-    <%= f.submit 'subscribe' %>
-  <% end %>
+      <%= render 'shared/subscribe_form' %>
   </div>
 </div>
 </div>

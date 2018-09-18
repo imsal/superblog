@@ -1,4 +1,5 @@
 .subscribe-box-container {
+
   width: 100%;
   margin-bottom: 4rem;
 
@@ -8,11 +9,28 @@
     border-top: 6px solid #208eb6;
     background-color: #e8f3f7;
 
+    @media only screen and (max-width: 482px) {
+      input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        text-align: center;
+        margin-bottom: 0.4rem;
+      }
+      input[type="submit"] {
+        width: 100%;
+        display: block;
+      }
+      .hide-on-mobile {
+        display: none;
+      }
+    }
+
     .subscribe-text {
       text-align: center;
 
       p {
-        font-size: 0.9em;
+        font-size: 0.95em;
         margin-bottom: 2rem;
         font-weight: bold;
       }
@@ -20,34 +38,7 @@
 
     .subscribe-form {
       text-align: center;
-      // form {
-      //
-      // }
-      // input[type="text"] {
-      //   display: block;
-      //   width: 80%;
-      //   margin: auto;
-      //   padding: 1.2rem;
-      //   box-sizing: border-box;
-      //   margin-bottom: 1rem;
-      //   font-size: 0.9em;
-      //   text-align: center;
-      // }
-      //
-      // input[type="submit"] {
-      //   margin: auto;
-      //   display: block;
-      //   width: 80%;
-      //   background-color: #208eb6;
-      //   color: #fff;
-      //   padding: 1.2rem;
-      //   font-size: 0.9em;
-      //
-      //   &:hover {
-      //     cursor: pointer;
-      //     background-color: #16637f;
-      //   }
-      // }
+
     }
   }
 }

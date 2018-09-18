@@ -2,8 +2,6 @@
 <section class="welcome-page-full-hero">
 
   <div class="hero-text">
-    <!-- <h1>Prove Your Wealth</h1>
-    <h1>is so amazing!</h1> -->
       <h1 class="impact">ProveYourWealth</h1>
   </div>
 
@@ -25,11 +23,7 @@
     </div>
 
     <div class="welcome-subscribe-form">
-    <%= form_for 'sub', url: subscribe_path do |f| %>
-      <%= f.text_field 'email_address', placeholder: 'myemail@domain.com' %>
-
-    <%= f.submit 'subscribe' %>
-  <% end %>
+      <%= render 'shared/subscribe_form' %>
   </div>
   </div>
 </div>
