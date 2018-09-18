@@ -65,6 +65,11 @@ header.header {
       left: 50%;
       transform: translate(-50%, -50%);
 
+      li {
+        padding: 8px 0;        
+      }
+
+
       a {
         padding: 8px;
         text-decoration: none;
