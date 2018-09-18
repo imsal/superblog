@@ -15,10 +15,6 @@ header.header {
   z-index: 9999;
   width: 100%;
   padding: 0;
-  // font-family: 'Noto Sans', sans-serif;
-  // font-family: 'Permanent Marker', cursive;
-  // font-family: 'Impact';
-  // font-variant: small-caps;
   font-weight: bold;
   background-color: $blue;
   position: fixed;
@@ -45,17 +41,14 @@ header.header {
     z-index: 2;
     left: 0;
     top: 0;
-    background-color: rgba(21,141,184, 0.9);//$blue;
+    background-color: rgba(21,141,184, 0.9);
     overflow-x: hidden;
 
     a.collapse-menu-button {
-      // text-align: right;
-      // color: #818181;
       color: #fff;
       text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
       text-decoration: none;
       display: block;
-      // font-size: 2em;
       font-size: 2.5em;
       padding: 15px 20px;
       position: absolute;
@@ -74,7 +67,6 @@ header.header {
 
       a {
         padding: 8px;
-        // margin: 8px 0;
         text-decoration: none;
         color: black;
         font-size: 1.5em;
@@ -160,11 +152,11 @@ header.header {
               padding: 2rem 0;
               font-size: 1.2em;
               color: #fff;
-              background-color: $blue;//#0099cc;//$blue;//#ebebeb;//$blue;
+              background-color: $blue;
               text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
               &:hover {
-                background-color: $orange;//#ea7247;//$orange;
+                background-color: $orange;
               }
 
               &:focus {
@@ -181,36 +173,13 @@ header.header {
 
 
 .tag-sub-header {
-  // overflow-x: scroll;
-  // position: static;
-  // overflow: scroll;
-  // white-space: nowrap;
-
-  background-color: #fff;//#e8f3f7;//#fff;
-
+  background-color: #fff;
   border-bottom: 0.1em solid #E6E6E6;
-
-
-
-
-//   display: flex;
-// flex-wrap: nowrap;
-// overflow-x: auto;
-// -webkit-overflow-scrolling: touch;
-// -ms-overflow-style: -ms-autohiding-scrollbar;
-
-// .mcs-item {
-
-
 
   a {
     color: #000;
-    // font-size: 12px !important;
-    // display: inline-block;
     padding: 2em 1em;
     text-decoration: none;
-
-     // flex: 0 0 auto;
 
     &:hover {
       color: #b84015;
@@ -221,6 +190,4 @@ header.header {
   a.active {
     color: #b84015;
   }
-// }
-
 }
