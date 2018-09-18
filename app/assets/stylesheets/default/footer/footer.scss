@@ -1,5 +1,5 @@
 .main-footer {
-  // padding: 2.5rem;
+  
   background-color: #158db8;
   color: white;
 
@@ -9,7 +9,6 @@
 
     .col-1 {
       padding: 2.5rem;
-      // height: 100%;
       box-sizing: border-box;
       margin: auto;
 
@@ -32,6 +31,10 @@
         font-size: 0.9em;
       }
 
+      p:nth-of-type(1) {
+        font-style: italic;
+      }
+
     }
 
     .col-2 {
@@ -43,12 +46,17 @@
         margin: auto;
 
         h4 {
-          margin-bottom: 0.5em;
+          margin-bottom: 0.6em;
           text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
 
         label {
-          margin-bottom: 0.5em;
+          padding: 0.4em;
+          background-color: #16637f;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
 
         input[type="text"], textarea {
@@ -75,6 +83,7 @@
     }
   }
 }
+
 @media all and (max-width: 979px) {
   .main-footer {
     .row {
