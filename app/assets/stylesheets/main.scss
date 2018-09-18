@@ -23,97 +23,6 @@
   padding-bottom: 0;
 }
 
-/////////////
-
-/*
-WELCOME
-form {
-    width: 100%;
-  input[type="text"] {
-    font-size: 16px;
-    padding: 2.5em;
-    width: 30%;
-  }
-  input[type="submit"] {
-    background-color: #208eb6;
-    color: #fff;
-    font-size: 16px;
-    padding: 2.5em;
-    width: 10%;
-    &:hover {
-      background-color: #16637f;
-      cursor: pointer;
-    }
-  }
-}
-
-FOOTER
-form {
-  width: 60%;
-  margin: auto;
-  // font-family: 'Noto Sans', sans-serif;
-
-  label {
-    font-size: 0.8em;
-    margin-top: 1em;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: 1em;
-    font-size: 1em;
-    margin-bottom: 1em;
-  }
-
-  input[type="submit"] {
-    padding: 1em;
-    width: 50%;
-    background-color: #141414;
-    border: 2px solid #fff;
-    color: #fff;
-    font-weight: bold;
-
-    &:hover {
-      background-color: #5a5a5a;
-      border: 2px solid #fff;
-      color: #fff;
-      cursor: pointer;
-    }
-  }
-}
-
-POST SHOW
-.subscribe-form {
-  input[type="text"] {
-    display: block;
-    width: 80%;
-    margin: auto;
-    padding: 1.2rem;
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-    font-size: 0.9em;
-    text-align: center;
-  }
-
-  input[type="submit"] {
-    margin: auto;
-    display: block;
-    width: 80%;
-    background-color: #208eb6;
-    color: #fff;
-    padding: 1.2rem;
-    font-size: 0.9em;
-
-    &:hover {
-      cursor: pointer;
-      background-color: #16637f;
-    }
-  }
-}
-
-*/
-
 form {
 box-sizing: border-box;
   label {
@@ -164,9 +73,6 @@ box-sizing: border-box;
     overflow-y: visible;
   }
 }
-
-
-
 
 .impact {
   font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif"
