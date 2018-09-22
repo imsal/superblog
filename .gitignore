@@ -31,4 +31,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+/app/assets/images/stock_images
+
 list_all_assets.html.erb

@@ -57,5 +57,5 @@ end
 
 
 Post.all.each_with_index do |post, index|
-  post.main_image.attach(io: File.open('app/assets/images' + "/stock-image-#{(index%14)+1}.jpg"), filename: "/stock-image-#{(index%14)+1}.jpg", content_type: 'image/jpg')
+  post.main_image.attach(io: File.open('app/assets/images/stock_images' + "/stock-image-#{(index%14)+1}.jpg"), filename: "/stock-image-#{(index%14)+1}.jpg", content_type: 'image/jpg')
 end
