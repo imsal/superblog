@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
 
-
-  get '/subscribe', to: 'subscribe#new', as: 'subscribe'
   post '/subscribe', to: 'subscribe#create'
-
-
-
-
 
 
   # resources :subscribers, only: %i[new create update edit destroy]
