@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @author.email_address %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @author.bio %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @author.password_digest %>
+</p>
+
+<p>
+  <strong>Authorization token:</strong>
+  <%= @author.authorization_token %>
+</p>
+
+<p>
+  <strong>Authorized:</strong>
+  <%= @author.authorized %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>

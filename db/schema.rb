@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_17_013451) do
+ActiveRecord::Schema.define(version: 2018_09_23_031109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,9 +38,11 @@ ActiveRecord::Schema.define(version: 2018_09_17_013451) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
-    t.string "password_digest"
-    t.string "email"
+    t.string "email_address"
     t.text "bio"
+    t.string "password_digest"
+    t.string "authorization_token"
+    t.boolean "authorized"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,18 +53,6 @@ ActiveRecord::Schema.define(version: 2018_09_17_013451) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.string "icon"
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.text "content"
-    t.bigint "parent_id"
-    t.boolean "notify_of_reply", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "post_id"
-    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "inquiries", force: :cascade do |t|
@@ -90,31 +80,6 @@ ActiveRecord::Schema.define(version: 2018_09_17_013451) do
     t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.decimal "price"
-    t.string "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  create_table "project_assets", force: :cascade do |t|
-    t.string "file"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "subscribers", force: :cascade do |t|
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "taggings", id: :serial, force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
@@ -140,14 +105,5 @@ ActiveRecord::Schema.define(version: 2018_09_17_013451) do
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "comments", "posts"
   add_foreign_key "posts", "categories"
 end
