@@ -130,3 +130,12 @@
     width: 33.333%;
   }
 }
+
+
+#card-container + #card-wrapper, .only-text-cards {
+  padding-bottom: 0 !important;
+
+  .article-link {
+    padding: 1rem 0 !important;
+  }
+}
