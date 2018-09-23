@@ -23,4 +23,8 @@ module ApplicationHelper
     category.slug == request.path.split('/').last
   end
 
+  def author_logged_in
+    !session[:author_id].nil?
+  end
+
 end

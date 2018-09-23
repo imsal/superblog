@@ -32,8 +32,9 @@ class SessionController < ApplicationController
   end
 
   def destroy
-    log_out if logged_in?
-    redirect_to root_url
+    # log_out if logged_in?
+    session.delete(:author_id)
+    redirect_to root_url, notice: 'logged out'
   end
 
 end
