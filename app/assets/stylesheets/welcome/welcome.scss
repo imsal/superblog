@@ -53,6 +53,13 @@ h1.centered {
 
 
 
+h2.welcome-title {
+  margin-top: 1.5rem;
+  color: #208eb6;
+  // text-align: center;
+}
+
+
 .welcome-subscribe-box-container {
   background-color: #e8f3f7;
   padding: 10rem 0;
@@ -72,27 +79,6 @@ h1.centered {
       text-align: center;
       margin-top: 2.5rem;
 
-
-      // form {
-      //     width: 100%;
-      //
-      //   input[type="text"] {
-      //     font-size: 16px;
-      //     padding: 2.5em;
-      //     width: 30%;
-      //   }
-      //   input[type="submit"] {
-      //     background-color: #208eb6;
-      //     color: #fff;
-      //     font-size: 16px;
-      //     padding: 2.5em;
-      //     width: 10%;
-      //     &:hover {
-      //       background-color: #16637f;
-      //       cursor: pointer;
-      //     }
-      //   }
-      // }
     }
   }
 }

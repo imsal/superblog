@@ -7,15 +7,15 @@
 
 </section>
 
-<h3>New Posts</h3>
+<h2 class="welcome-title fancy fancy-ex"><span>New Posts</span></h2>
 <%= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
-<%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>
 <%= render 'shared/card_list_layout', iteration: Post.last(6)  %>
+<%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>
 
-<h3>Recommended Posts</h3>
+<h2 class="welcome-title fancy fancy-ex"><span>Recommended Posts</span></h2>
 <%= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
-<%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>
 <%= render 'shared/card_list_layout', iteration: Post.last(6)  %>
+<%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>
 
 
 
