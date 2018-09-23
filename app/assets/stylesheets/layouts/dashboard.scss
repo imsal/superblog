@@ -107,3 +107,29 @@
     }
   }
 }
+
+
+
+.dashboard-title {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.dashboard_form {
+  input, textarea {
+    border: 1px solid #000;
+    margin-bottom: 1rem;
+  }
+
+  select {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    margin-top: 1rem;
+  }
+
+  input[type="file"] {
+    border: 0;
+  }
+}

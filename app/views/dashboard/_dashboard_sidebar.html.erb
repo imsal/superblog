@@ -3,7 +3,7 @@
 
     <li><%= link_to 'Home', dashboard_path %></li>
     <li class="menu-title">Post</li>
-    <li><%= link_to 'Create New', new_post_path %></li>
+    <li><%= link_to 'Create New', new_post_path, data: { turbolinks: false } %></li>
     <li><%= link_to 'List All', posts_path %></li>
 
     <li class="menu-title">Categories</li>
@@ -11,11 +11,14 @@
     <li><%= link_to 'List All', categories_path %></li>
 
     <li class="menu-title">Tags</li>
-    <li><a href="#">Create New</a></li>
     <li><%= link_to 'List All', dashboard_tags_path %></li>
 
     <li class="menu-title">Contact Us</li>
     <li><%= link_to 'List Messages', inquiries_path %></li>
+
+    <li class="menu-title">APIs</li>
+    <li><a href="https://app.sendgrid.com/login" target="_blank" rel="noreferrer">SendGrid</a></li>
+    <li><a href="#">AWS</a></li>
 
   </ul>
 </aside>

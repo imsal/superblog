@@ -31,7 +31,7 @@
   <td><%= post.page_count %></td>
   <td><%= post.category.name %></td>
   <td></td>
-  <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  <td><%= link_to 'Edit', edit_post_path(post), data: { turbolinks: false } %></td>
 </tr>
 <% end %>
 </tbody>
@@ -66,7 +66,7 @@
   <td><%= link_to post.title, post %></td>
   <td><%= post.category.name %></td>
   <td></td>
-  <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  <td><%= link_to 'Edit', edit_post_path(post), data: { turbolinks: false } %></td>
 </tr>
 <% end %>
 </tbody>

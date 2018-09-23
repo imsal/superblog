@@ -69,11 +69,23 @@
       <a href="#">Terms<span class="hide-in-mobile"> of Use</span></a>
     </li>
 
-    <% if author_logged_in %>
+  </ul>
+
+
+  <% if author_logged_in %>
+  <ul>
+
+    <li><%= link_to 'Dashboard', dashboard_path %></li>
+
+    <li><%= link_to 'Profile', '#' %></li>
+
     <li>
       <%= link_to 'Log out', logout_path, method: :delete %>
     </li>
-    <% end %>
 
   </ul>
+
+  <% end %>
+
+
 </footer>
