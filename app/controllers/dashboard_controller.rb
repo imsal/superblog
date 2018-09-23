@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
 
-  http_basic_authenticate_with name: Rails.application.credentials.dig(:admin, :user_name), password: Rails.application.credentials.dig(:admin, :password)
+  before_action :author_must_be_signed_in_to_access
 
   def index
     @newest_posts = Post.where(active: true).order(created_at: :desc).first(25)

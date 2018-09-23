@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
+
+  get '/login', to: 'session#new', as: 'login'
+  post '/login', to: 'session#create'
+  delete '/logout', to: 'session#destroy', as: 'logout'
+
+
   resources :authors
+
+
   post '/subscribe', to: 'subscribe#create'
 
 

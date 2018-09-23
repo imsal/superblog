@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-  http_basic_authenticate_with name: Rails.application.credentials.dig(:admin, :user_name), password: Rails.application.credentials.dig(:admin, :password)
   
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 

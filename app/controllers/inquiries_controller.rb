@@ -1,4 +1,6 @@
 class InquiriesController < ApplicationController
+  before_action :author_must_be_signed_in_to_access, except: [:create]
+
   before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
 
   # GET /inquiries
