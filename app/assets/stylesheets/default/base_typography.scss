@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Roboto');
 
 // font-family: 'Playfair Display', serif;
 // font-family: 'IBM Plex Serif', serif;
@@ -6,22 +6,30 @@
 
 body {
   font-family: 'IBM Plex Serif', serif;
+  // font-family: 'Playfair Display', serif;
   // Set Default Font Type
   // Set Base Font Size
   font-size: 17px;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Playfair Display', serif;
+  // font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-@font-face {
-  font-family: 'Impact';
-  src: asset-url('impact.ttf');
-}
+// @font-face {
+//   font-family: 'Impact';
+//   src: asset-url('impact.ttf');
+// }
 
 .impact {
-  font-family: Impact,Arial Black,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,sans serif;
+  // font-family: Impact,Arial Black,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,sans serif;
+  // font-family: "Arial","Helvetica Neue",Helvetica,Arial,sans-serif;
+  // font-family: 'IBM Plex Serif', serif;
+  font-family: 'Roboto', sans-serif;
+
+  // font-family: 'Playfair Display', serif;
+  // text-shadow: none !important;
 }
 
 h1 {

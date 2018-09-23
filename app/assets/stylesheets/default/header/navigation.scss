@@ -24,7 +24,7 @@ header.header {
 
   a.expand-menu-button {
     color: #fff;
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    // text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     text-decoration: none;
     font-size: 2.2em;
     padding: 15px;
@@ -45,7 +45,7 @@ header.header {
 
     a.collapse-menu-button {
       color: #fff;
-      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      // text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
       text-decoration: none;
       display: block;
       font-size: 2.5em;
@@ -76,7 +76,7 @@ header.header {
         font-size: 1.5em;
 
         color: #fff;
-        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        // text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
         &:hover {
           color: #f1f1f1;
@@ -98,7 +98,7 @@ header.header {
 
   .spacer {
     width: 100%;
-    background-color: #208eb6;
+    // background-color: #208eb6;
     // height is set by jquery
   }
 
@@ -109,6 +109,7 @@ header.header {
     -ms-transition: top 0.4s ease-in-out;
     -o-transition: top 0.4s ease-in-out;
     transition: top 0.4s ease-in-out;
+    background-color: inherit;
 
     a.expand-menu-button {
       display: none !important;
@@ -138,7 +139,9 @@ header.header {
 
           li.active {
             a {
-              background-color: #43a3c6 !important;
+              // background-color: #43a3c6 !important;
+              // border-bottom: 10px solid #43a3c6;
+              background-color: #186c8b !important;
             }
           }
 
@@ -156,11 +159,17 @@ header.header {
               padding: 2rem 0;
               font-size: 1.2em;
               color: #fff;
-              background-color: $blue;
-              text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+              // background-color: $blue;
+
+              // background-color: #181716;
+              background-color: #1c637e;
+
+              // text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 
               &:hover {
-                background-color: $orange;
+                // background-color: $orange;
+                background-color: #7e371c;
               }
 
               &:focus {
