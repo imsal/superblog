@@ -31,7 +31,6 @@ $(document).on('turbolinks:load', function() {
 
   $(window).resize(function(){
     setSpacerHeight();
-    MagicScroll.refresh(); // resets tag scroller
   });
 
 

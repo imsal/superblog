@@ -37,7 +37,7 @@
 <div class="spacer"></div>
 
 <% if controller.controller_name == 'display' && (controller.action_name == 'category' || controller.action_name == 'tags') %>
-<div class="tag-sub-header MagicScroll">
+<div class="tag-sub-header">
 
 <% ActsAsTaggableOn::Tag.all.each do |tag| %>
         <% if request.path.split('/').last == tag.name %>

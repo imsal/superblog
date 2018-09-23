@@ -186,13 +186,21 @@ header.header {
 
 
 .tag-sub-header {
-  background-color: #fff;
-  border-bottom: 0.1em solid #E6E6E6;
+  // background-color: #fff;
+  background-color: #e8f3f7;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  // border-bottom: 0.1em solid #E6E6E6;
 
   a {
+
     color: #000;
-    padding: 2em 1em;
+    // padding: 2em 1em;
+    padding: 1.2em;
     text-decoration: none;
+    display: inline-block;
 
     &:hover {
       color: #b84015;
