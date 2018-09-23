@@ -10,17 +10,29 @@
 
 <article>
 
-  <div class="card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "832x590") %>)">
 
-    <h6 class="card-tag impact"><%= post.category.name %></h6>
+
+<div class="card-image-wrapper">
+
+
+  <div class="card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "832x590") %>)">
+  </div>
   </div>
 
   <div class="card-contents">
+
     <h4 class="card-title"><%= post.title.titleize %></h4>
     <p><%= post.summary %></p>
+
+
   </div>
 
+
+
+
 </article>
+
+<h6 class="card-tag impact"><%= post.category.name %></h6>
 <% end %>
 
 <% end %>

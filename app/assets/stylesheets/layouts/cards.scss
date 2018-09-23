@@ -1,27 +1,39 @@
 #card-container {
-  #card-wrapper {
 
+  #card-wrapper {
     display: flex;
     flex-wrap: wrap;
-
     border-bottom: 0.01em solid #E6E6E6;
+    padding-bottom: 2rem;
 
     .article-link {
-      display: inline-block;
-
+      // display: inline-block;
       text-decoration: none;
-      box-sizing: border-box;
+      position: relative;
+      padding-bottom: 2rem;
+      // box-sizing: border-box;
 
       &:hover {
         cursor: pointer;
 
         article {
-          transition: 0.5s;
-
+          // transition: 0.5s;
           .card-contents {
             .card-title {
               text-decoration: underline;
             }
+          }
+
+          .card-image {
+            transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            /* IE 9 */
+            -moz-transform: scale(1.2);
+            /* Firefox */
+            -webkit-transform: scale(1.2);
+            /* Safari and Chrome */
+            -o-transform: scale(1.2);
+            /* Opera */
           }
         }
       }
@@ -29,36 +41,48 @@
       article {
         margin: 2rem;
 
-        transition: all .2s ease;
-vertical-align: middle;
-//display: inline-block; /* change the default display type to inline-block */
- overflow: hidden;
+        // position: relative;
+        // padding-bottom: 12px;
+
+        .card-image-wrapper {
+
+          // display: inline-block;
+          overflow: hidden;
+          // height: 600px;
+
+        }
 
         .card-image {
-          padding-bottom: 70%;
-          background-size: cover;
-          position: relative;
-          margin-bottom: 1rem;
-          border: 2px solid black;
-          box-sizing: border-box;
 
-          .card-tag {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 12px;
-            background-color: rgba(184,64,21, 1);
-            color: white;
-            // font-family: Impact;
-            letter-spacing: 0.05em;
-            // text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-          }
+          padding-bottom: 70%;
+          // height: 500px;
+
+
+          background-size: cover;
+          // position: relative;
+
+          // border: 2px solid black;
+          // box-sizing: border-box;
+
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+
+          // vertical-align: middle;
+
         }
 
         .card-contents {
           background-color: #fff;
 
+
+
+
           .card-title {
+            margin: 1rem 0;
+            // clear: right;
             font-size: 1.2em;
             line-height: 1.4em;
             letter-spacing: 0.02em;
@@ -72,20 +96,35 @@ vertical-align: middle;
             font-size: 1em;
           }
         }
+
+
+      }
+
+      .card-tag {
+        position: absolute;
+        bottom: 0;
+        left: 2rem;
+
+        padding: 12px;
+        width: 25%;
+        background-color: rgba(184,64,21, 1);
+        color: white;
+        letter-spacing: 0.05em;
+        text-align: center;
+        // float: right;
       }
     }
   }
 }
-
 @media only screen and (min-width: 615px) {
   #card-container .three-col {
     width: 50%;
   }
+
   #card-container .two-col {
     width: 50%;
   }
 }
-
 @media only screen and (min-width: 940px) {
   #card-container .three-col {
     width: 33.333%;
