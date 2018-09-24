@@ -70,4 +70,23 @@ $(document).on('turbolinks:load', function() {
   });
 
 
+  // ~~~~~~~~~~~~ SET CARDS TO SAME HEIGHT
+
+  var maxTitleHeight = 0;
+
+  $(".card-title").each(function(){
+     if ($(this).height() > maxTitleHeight) { maxTitleHeight = $(this).height(); }
+  });
+
+  $(".card-title").height(maxTitleHeight);
+
+  var maxSummaryHeight = 0;
+
+  $(".card-summary").each(function(){
+     if ($(this).height() > maxSummaryHeight) { maxSummaryHeight = $(this).height(); }
+  });
+
+  $(".card-summary").height(maxSummaryHeight);
+
+
 });
