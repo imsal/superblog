@@ -74,3 +74,25 @@ font-size: 0;
     overflow-y: visible;
   }
 }
+
+
+.parallax-wrapper  {
+  // background-attachment: fixed;
+  height: 100%;
+
+  .parallax {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 100rem;
+  }
+}
+
+
+
+h2.tags-title {
+  color: #fff;
+  padding: 2rem 0;
+  background-color: #e8f3f7;
+  text-align: center;
+}
