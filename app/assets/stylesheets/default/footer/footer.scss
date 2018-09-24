@@ -1,6 +1,6 @@
 .main-footer {
 
-  background-color: #158db8;
+  background-color: #16637f;//#175369;//#158db8;
   color: white;
 
   .row {
@@ -52,7 +52,7 @@
 
         label {
           padding: 0.4em;
-          background-color: #16637f;
+          background-color: #175369;
 
           &:hover {
             cursor: pointer;
@@ -67,8 +67,8 @@
         button {
           display: block;
           width: 50%;
-          background-color: #16637f;
-          border: 2px solid #16637f;
+          background-color: #175369;
+          border: 2px solid #175369;
           &:hover {
             cursor: pointer;
 
@@ -123,7 +123,7 @@
 
 
 footer.bottom-footer {
-  background-color: #16637f;
+  background-color: #175369;
  padding: 2.5rem;
 
   ul {
