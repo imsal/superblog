@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
 
+  get "privacy", to: 'static_pages#privacy_policy', as: "privacy"
+  get "terms", to: 'static_pages#terms_of_use', as: "terms"
+
   get '/login', to: 'session#new', as: 'login'
   post '/login', to: 'session#create'
   delete '/logout', to: 'session#destroy', as: 'logout'
