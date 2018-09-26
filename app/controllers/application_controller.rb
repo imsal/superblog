@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
   def current_user
 
     if !session[:author_id].nil?
-      Author.find(session[:author_id])
+      @current_user = Author.find(session[:author_id])
     else
       nil
     end
-    
+
   end
 
   def author_must_be_signed_in_to_access
