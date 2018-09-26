@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   # sets number or posts per page/load
   self.per_page = 9
 
+  belongs_to :author
   has_one_attached :main_image
   scope :with_preloaded_main_image, -> { preload(main_image_attachment: :blob) }
 

@@ -10,32 +10,6 @@ class PostsController < ApplicationController
     @posts = Post.order(id: :desc)
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
-  # def show
-  #   # increments unique page count
-  #   @post.update(page_count: @post.page_count + 1) unless session["post_#{@post.id}"] == 1
-  #   session["post_#{@post.id}"] ||= 1
-  #
-  #   # sets recently viewed page
-  #   declare_recently_viewed_post_ids
-  #   set_recently_viewed_post_id(@post)
-  #
-  #   @recently_viewed_posts = []
-  #   session[:recently_viewed_post_ids].each do |id|
-  #     @recently_viewed_posts.push(Post.find(id))
-  #   end
-  #
-  #   # @recently_viewed_posts =
-  #
-  #   @current_url = request.original_url
-  #   @article_title = @post.title.gsub(' ', '%20')
-  #
-  #   @posts_placeholder = Post.last(4)
-  #   @popular_posts = Post.order(page_count: :desc).first(4)
-  #
-  # end
-
   # GET /posts/new
   def new
     @post = Post.new
@@ -87,6 +61,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, :category_id, :active, :activation_date, :slug, :tag_list, :main_image, :summary, images: [])
+      params.require(:post).permit(:title, :body, :category_id, :active, :activation_date, :slug, :tag_list, :main_image, :summary, :author_id, images: [])
     end
 end
