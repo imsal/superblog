@@ -1,6 +1,5 @@
 class InquiriesController < ApplicationController
   before_action :author_must_be_signed_in_to_access, except: [:create]
-
   before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
 
   # GET /inquiries
@@ -26,6 +25,13 @@ class InquiriesController < ApplicationController
     @inquiry = Inquiry.new(inquiry_params)
 
     if @inquiry.save
+
+      name = @inquiry.name
+      email = @inquiry.email
+      message = @inquiry.message
+
+      InquiryMailer.send_automated_inquiry_response(email, name, message).deliver_now
+
       redirect_back fallback_location: root_path, notice: "Thank you for reaching out to us. A member of our team will reach out to you momentarily!"
     else
       redirect_back fallback_location: root_path, alert: "We've encountered an error. Your message was not successfully sent."

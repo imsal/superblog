@@ -34,6 +34,10 @@ module SendWelcomeEmail
   def retrieve_transactional_template
     transactional_id = 'd-8cfd1172c1bf4a6ea3369044cade8606'
 
+    transactional_template = [
+      'd-8cfd1172c1bf4a6ea3369044cade8606' # welcome email for new subscribers
+    ]
+
     url = URI("https://api.sendgrid.com/v3/templates/#{transactional_id}")
 
     http = Net::HTTP.new(url.host, url.port)
