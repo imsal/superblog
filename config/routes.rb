@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :subscribers
   get "privacy", to: 'static_pages#privacy_policy', as: "privacy"
   get "terms", to: 'static_pages#terms_of_use', as: "terms"
 
