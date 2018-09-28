@@ -10,6 +10,7 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1
   def show
+    @posts = Post.where(author_id: @author.id).order(created_at: :desc).paginate(:page => params[:page], :per_page => 15)
   end
 
   # GET /authors/new
