@@ -1,3 +1,4 @@
+
 <%= form_with(model: subscriber, local: true) do |form| %>
   <% if subscriber.errors.any? %>
     <div id="error_explanation">
@@ -10,6 +11,9 @@
       </ul>
     </div>
   <% end %>
+
+
+
 
   <div class="field">
     <%= form.label :email %>

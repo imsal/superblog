@@ -30,7 +30,7 @@ font-size: 0;
     font-size: 16px;
     display: block;
   }
-  input[type="text"] {
+  input[type="text"], input[type="email"], input[type="password"] {
     font-size: 16px;
     padding: 1.2rem;
   }
@@ -77,7 +77,6 @@ font-size: 0;
 
 
 .parallax-wrapper  {
-  // background-attachment: fixed;
   height: 100%;
 
   .parallax {
@@ -95,4 +94,33 @@ h2.tags-title {
   padding: 2rem 0;
   background-color: #175369;
   text-align: center;
+}
+
+
+.login-bg
+ {
+  background-color: #e8f3f7;
+}
+.login {
+
+  display: block;
+  text-align: center;
+  form {
+    display: inline-block;
+    width: 70%;
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      margin: auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+  }
 }
