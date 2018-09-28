@@ -5,9 +5,9 @@
     <%= image_tag (asset_url 'about_me.jpg') %>
   </div>
   <div class="author-right-col">
-    <h5>Sal Tardibuono</h5>
+    <h5><%= @post.author.name %></h5>
 
-    <p>Sal likes to watch movies, listen to music, bust jokes, and bag on people. His words can and will hurt your feelings. So light up a stogie, pour yourself a tall, stiff drink, and buckle up for the ride of your life.</p>
+    <p><%= @post.author.bio %></p>
   </div>
 </div>
 

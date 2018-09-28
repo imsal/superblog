@@ -31,6 +31,8 @@ class InquiriesController < ApplicationController
       message = @inquiry.message
 
       InquiryMailer.send_automated_inquiry_response(email, name, message).deliver_now
+      
+      InquiryMailer.alert_company_of_inquiry(email, name, message).deliver_now
 
       redirect_back fallback_location: root_path, notice: "Thank you for reaching out to us. A member of our team will reach out to you momentarily!"
     else

@@ -7,7 +7,7 @@
   </div>
 
   <div class="post-content">
-    <h5>By: <%= link_to @post.author.name, '#' %></h5>
+    <h5>By: <%= link_to @post.author.name, author_path(@post.author) %></h5>
     <%= @post.body.html_safe %>
   </div>
 
