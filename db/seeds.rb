@@ -1,13 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-
 posts_body_array = [
   "<p>Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing prudent waiting in be. Comparison age not pianoforte increasing delightful now. Insipidity sufficient dispatched any reasonably led ask. Announcing if attachment resolution sentiments admiration me on diminution.</p><p>Arrived totally in as between private. Favour of so as on pretty though elinor direct. Reasonable estimating be alteration we themselves entreaties me of reasonably. Direct wished so be expect polite valley. Whose asked stand it sense no spoil to. Prudent you too his conduct feeling limited and. Side he lose paid as hope so face upon be. Goodness did suitable learning put.</p>
 <p>Case read they must it of cold that. Speaking trifling an to unpacked moderate debating learning. An particular contrasted he excellence favourable on. Nay preference dispatched difficulty continuing joy one. Songs it be if ought hoped of. Too carriage attended him entrance desirous the saw. Twenty sister hearts garden limits put gay has. We hill lady will both sang room by. Desirous men exercise overcame procured speaking her followed.</p>
@@ -271,7 +261,9 @@ posts_body_array = [
    'sanchez, tacos, oops'
  ]
 
-posts = ["Don't leave home without trying this!", "The top 10 rated movies of 2018", "Michael Jordan is missing 4 left toes", "A lot of junk up in the trunk", "Cheese fountains are the newest trend", "Fake News, and How to Tell the Truth", "Bill Gates is Pregnant?!", "Holy Cow, The Pop is Dead", "Michael Jackson Rises from Hell", "Bill and Teds STD", "How to Bake a knife in a Cake"]
+# posts = ["Don't leave home without trying this!", "The top 10 rated movies of 2018", "Michael Jordan is missing 4 left toes", "A lot of junk up in the trunk", "Cheese fountains are the newest trend", "Fake News, and How to Tell the Truth", "Bill Gates is Pregnant?!", "Holy Cow, The Pop is Dead", "Michael Jackson Rises from Hell", "Bill and Teds STD", "How to Bake a knife in a Cake"]
+
+posts = ["Up unpacked friendly ecstatic so possible humoured do", "Residence certainly elsewhere something she preferred cordially law", "Believing neglected so so allowance existence departure in", "Now eldest new tastes plenty mother called misery get", "Pianoforte solicitude so decisively unpleasing conviction", "Pleased him another was settled for", "Rooms oh fully taken by worse do"]
 
 x = Author.create(name: 'Sal Tardibuono', email_address: 'saltad347@gmail.com', password: 'cheese', password_confirmation: 'cheese', bio: 'Sal likes to watch movies, listen to music, bust jokes, and bag on people. His words can and will hurt your feelings. So light up a stogie, pour yourself a tall, stiff drink, and buckle up for the ride of your life.')
 
@@ -281,7 +273,7 @@ categories.each_with_index do |cat, cat_index|
   x.save!
 
   posts.each_with_index do |post, index|
-    y = Post.new(title: "#{post} - #{x.name}", body: posts_body_array[index % 11], category_id: x.id,
+    y = Post.new(title: "#{post.truncate(50).gsub('...','')} - #{x.name.truncate(10).gsub('...','')}", body: posts_body_array[index % 11], category_id: x.id,
         page_count: index * 5, active: true, activation_date: Time.now, tag_list: tags[cat_index],
         summary: posts_body_array[index % 11].truncate(124-(index*2 % 30)).delete('<h2>').delete('</h2>').delete('<p>').delete('</p>'), author_id: Author.last.id)
     y.save!
