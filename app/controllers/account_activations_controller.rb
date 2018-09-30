@@ -5,14 +5,12 @@ class AccountActivationsController < ApplicationController
     subscriber = Subscriber.find_by(email: params[:email])
     if subscriber && !subscriber.activated? && subscriber.authenticated?(:activation, params[:id])
       subscriber.activate
-      flash[:success] = "Account activated!"
-      redirect_to root_url
+      redirect_to root_url, notice: 'Account activated!'
     else
-      flash[:danger] = "Invalid activation link"
-      redirect_to root_url
+      redirect_to root_url, alert: 'Invalid activation link.'
     end
   end
 
-  
+
 
 end
