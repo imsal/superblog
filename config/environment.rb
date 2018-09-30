@@ -5,6 +5,9 @@ require_relative 'application'
 Rails.application.initialize!
 
 
+
+
+
 ActionMailer::Base.smtp_settings = {
   user_name: Rails.application.credentials.dig(:send_grid, :user_name),
   password: Rails.application.credentials.dig(:send_grid, :password),

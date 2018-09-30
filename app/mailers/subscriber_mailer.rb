@@ -7,4 +7,12 @@ class SubscriberMailer < ApplicationMailer
     )
   end
 
+
+  def account_activation(subscriber)
+    @subscriber = subscriber
+    @greeting = "Hi"
+
+    mail to: subscriber.email, subject: 'Account Activation'
+  end
+
 end

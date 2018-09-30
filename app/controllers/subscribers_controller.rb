@@ -24,7 +24,8 @@ class SubscribersController < ApplicationController
     @subscriber = Subscriber.new(subscriber_params)
 
     if @subscriber.save
-      SubscriberMailer.send_subscription_confirmation(@subscriber.email).deliver_now
+      @subscriber.send_activation_email
+      # SubscriberMailer.send_subscription_confirmation(@subscriber.email).deliver_now
       redirect_to @subscriber, notice: 'Subscriber was successfully created.'
     else
       render :new

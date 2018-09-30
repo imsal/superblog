@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
 
   post '/subscribe', to: 'subscribe#create'
+  resources :account_activations, only: [:edit] # sets up just the edit action for this route
+
 
 
   # resources :subscribers, only: %i[new create update edit destroy]

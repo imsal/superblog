@@ -1,4 +1,7 @@
 Rails.application.configure do
+
+  config.action_mailer.default_url_options = { :host => 'murmuring-savannah-11483.herokuapp.com' }
+
   config.public_file_server.enabled = true
 
   config.tinymce.install = :compile
