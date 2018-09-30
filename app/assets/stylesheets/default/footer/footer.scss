@@ -41,14 +41,18 @@
       padding: 2.5rem;
       box-sizing: border-box;
 
+      h4 {
+        margin: auto;
+        margin-bottom: 0.6em;
+        width: 80%;
+      }
+
       form {
+
         width: 80%;
         margin: auto;
 
-        h4 {
-          margin-bottom: 0.6em;
-          // text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        }
+
 
         label {
           padding: 0.4em;
@@ -105,6 +109,10 @@
 
       .col-2 {
         border: 0;
+
+        h4 {
+          width: 100%;
+        }
 
         form {
           padding: 0;

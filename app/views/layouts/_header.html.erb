@@ -10,21 +10,15 @@
 
       <ul>
 
-        <% if request.url == root_url %>
-          <li class="active"><%= link_to 'Home', root_url %></li>
-        <% else %>
           <li><%= link_to 'Home', root_url %></li>
-        <% end %>
 
         <% Category.order(:id).each do |cat| %>
 
-          <% if is_category_active?(cat) %>
-            <li class="active"><%= link_to cat.name, display_category_path(cat) %></li>
-          <% else %>
             <li><%= link_to cat.name, display_category_path(cat) %></li>
-          <% end %>
 
         <% end %>
+
+        <li><%= link_to 'Store', '#' %></li>
 
       </ul>
     </div>
