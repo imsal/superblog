@@ -12,10 +12,8 @@
 
           <li><%= link_to 'Home', root_url %></li>
 
-        <% Category.order(:id).each do |cat| %>
-
-            <li><%= link_to cat.name, display_category_path(cat) %></li>
-
+        <% Category.order(:id).each_with_index do |cat, index| %>
+            <li><%= link_to cat.name, display_category_path(cat), class: 'mega-menu-dropdown', id: "dropdown-#{index}" %></li>
         <% end %>
 
         <li><%= link_to 'Store', '#' %></li>
@@ -27,6 +25,20 @@
   </div>
   <!-- ./overlay -->
 </header>
+
+
+
+  <div class="mega-menu">
+    <div class="mega-menu-header">
+      <h3>Some Header</h3>
+    </div>
+    <div class="mega-menu-content">
+      <% 12.times do %>
+      <h3><a href="#">Blah</a></h3>
+      <% end %>
+    </div>
+  </div>
+
 
 <div class="spacer"></div>
 

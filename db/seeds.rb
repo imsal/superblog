@@ -239,16 +239,23 @@ posts_body_array = [
 
 
  categories =
+  # [
+  #   ['Movies', "ticket"],
+  #   ['TV Shows', "tv"],
+  #   ['Music', "music" ],
+  #   ['Music Videos', "video-camera"],
+  #   ['Concerts & Festivals', "location-arrow" ],
+  #   ['Podcasts', "headphones"],
+  #   ['eBooks', "book"]
+  # ]
+  
   [
-    # Category Name, FA Icon
-    ['Movies', "ticket"],
-    ['TV Shows', "tv"],
-    ['Music', "music" ],
-    ['Music Videos', "video-camera"],
-    ['Concerts & Festivals', "location-arrow" ],
-    ['Podcasts', "headphones"],
-    ['eBooks', "book"]
+    ['Entertainment', "ticket"],
+    ['Lifestyle', "ticket"],
+    ['Food & Drinks', "ticket"],
+    ['Educational', "ticket"],
   ]
+
 
  tags = [
    'comedy, horror, thriller',

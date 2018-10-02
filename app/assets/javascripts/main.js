@@ -61,6 +61,33 @@ $(document).on('turbolinks:load', function() {
   });
 
 
+  //  Sets top position of mega menu based on dynamic header height
+
+  $('.mega-menu').css('top', $('.header').height())
+
+
+
+
+  $('.mega-menu-dropdown').hover(
+    function() {
+      $('.mega-menu').addClass('display-mega-menu');
+    },
+    function() {
+      $('.mega-menu').removeClass('display-mega-menu');
+    }
+  )
+
+
+  $('.mega-menu').hover(
+    function() {
+      $('.mega-menu').addClass('display-mega-menu');
+    },
+    function() {
+      $('.mega-menu').removeClass('display-mega-menu');
+    }
+  )
+
+
 
 
   // ~~~~~~~~ Creates Fading Flash Messages ~~~~~~~~
