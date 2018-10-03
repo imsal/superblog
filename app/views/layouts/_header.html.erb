@@ -29,9 +29,8 @@
 
   <% Category.main_categories.order(:id).each_with_index do |cat, index| %>
   <div class="mega-menu" id="mega-menu-<%= index %>" data-mega-menu-id="<%= index %>">
-    <div class="mega-menu-header">
-      <h3><%= cat.name %></h3>
-    </div>
+
+
     <div class="mega-menu-content">
       <% cat.sub_categories.each do |sub| %>
         <%= link_to sub.name, display_category_path(sub) %>

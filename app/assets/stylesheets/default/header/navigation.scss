@@ -214,19 +214,21 @@ header.header {
   position: fixed;
   z-index: 5;
 
-  .mega-menu-header {
-    h3 {
-      padding: 2rem;
-      color: #fff;
-    }
-  }
+  // .mega-menu-header {
+  //   h3 {
+  //     padding: 2rem;
+  //     color: #fff;
+  //   }
+  // }
   .mega-menu-content {
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: 33.33% auto 33.33%;
 
     a {
+      padding: 1rem;
       color: #fff;
-      display: inline;
+      // display: inline;
     }
   }
 }
