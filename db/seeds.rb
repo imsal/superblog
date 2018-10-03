@@ -305,7 +305,10 @@ Post.all.each_with_index do |post, index|
 
 end
 =end
-categories = ['Entertainment', 'Lifestyle', 'Food & Drink', 'Educational']
+
+Author.create(email_address: 'sal', name: 'sal', bio: 'blah', password: 'sal', password_confirmation: 'sal' )
+
+categories = ['Entertainment', 'Lifestyle', 'Recipes', 'Educational']
 
 sub_categories = [
   ['Music', 'Movies', 'TV Shows', 'Music Videos', 'Concerts', 'Podcasts'],
@@ -316,14 +319,8 @@ sub_categories = [
 
 categories.each_with_index do |cat, index|
   main_cat = Category.create(name: cat)
-  
+
   sub_categories[index].each do |sub|
     Category.create(name: sub, parent_id: main_cat.id)
   end
 end
-
-
-
-
-
-Author.create(email_address: 'sal', name: 'sal', bio: 'blah', password: 'sal', password_confirmation: 'sal' )
