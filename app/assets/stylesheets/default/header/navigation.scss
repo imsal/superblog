@@ -135,11 +135,6 @@ header.header {
           flex-wrap: nowrap;
           height: 100%;
 
-          li.active {
-            a {
-              // background-color: #217393 !important;
-            }
-          }
 
           li {
             padding: 0;
@@ -160,6 +155,7 @@ header.header {
               // text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
               &:hover {
                 // background-color: $orange;
+                cursor: pointer;
                 background-color: #175369; //$orange;//#7e371c;
               }
 
@@ -204,6 +200,9 @@ header.header {
 .display-mega-menu {
   display: block !important;
 }
+.display-hover-background {
+  background-color: #175369 !important;
+}
 
 
 
@@ -214,6 +213,7 @@ header.header {
   width: 100%;
   position: fixed;
   z-index: 5;
+
   .mega-menu-header {
     h3 {
       padding: 2rem;
@@ -223,5 +223,10 @@ header.header {
   .mega-menu-content {
     display: grid;
     grid-template-columns: 33.33% auto 33.33%;
+
+    a {
+      color: #fff;
+      display: inline;
+    }
   }
 }

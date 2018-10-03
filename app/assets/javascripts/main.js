@@ -67,25 +67,43 @@ $(document).on('turbolinks:load', function() {
 
 
 
+  /// displays the mega menu when the dropdown is hovered
+  $( ".mega-menu-dropdown" ).hover(
 
-  $('.mega-menu-dropdown').hover(
     function() {
-      $('.mega-menu').addClass('display-mega-menu');
-    },
-    function() {
-      $('.mega-menu').removeClass('display-mega-menu');
+
+      var dropdownSelectorId = $(this).data('dropdown-selector');
+      $( "#mega-menu-" + dropdownSelectorId ).addClass('display-mega-menu');
+
+    }, function() {
+
+      var dropdownSelectorId = $(this).data('dropdown-selector');
+      $( "#mega-menu-" + dropdownSelectorId ).removeClass('display-mega-menu');
+
     }
   )
 
 
-  $('.mega-menu').hover(
+  // keeps the mega menu open when mega menu is hovered and keeps dropdown bg color active
+  $( ".mega-menu" ).hover(
+
     function() {
-      $('.mega-menu').addClass('display-mega-menu');
-    },
-    function() {
-      $('.mega-menu').removeClass('display-mega-menu');
+      var megaMenuId = $(this).attr('id');
+      $( "#" + megaMenuId ).addClass('display-mega-menu');
+
+      var megaMenuData = $(this).data('mega-menu-id');
+      $( "#drop-down-" + megaMenuData ).addClass("display-hover-background");
+
+    }, function() {
+
+      var megaMenuId = $(this).attr('id');
+      $( "#" + megaMenuId ).removeClass('display-mega-menu');
+
+      var megaMenuData = $(this).data('mega-menu-id');
+      $( "#drop-down-" + megaMenuData ).removeClass("display-hover-background");
     }
   )
+
 
 
 
