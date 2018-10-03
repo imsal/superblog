@@ -12,7 +12,7 @@
 
           <li><%= link_to 'Home', root_url %></li>
 
-        <% Category.order(:id).each_with_index do |cat, index| %>
+        <% Category.main_categories.order(:id).each_with_index do |cat, index| %>
             <li><%= link_to cat.name, display_category_path(cat), class: 'mega-menu-dropdown', data: { dropdown_selector: index }, id: "drop-down-#{index}" %></li>
         <% end %>
 
@@ -27,14 +27,14 @@
 </header>
 
 
-  <% Category.order(:id).each_with_index do |cat, index| %>
+  <% Category.main_categories.order(:id).each_with_index do |cat, index| %>
   <div class="mega-menu" id="mega-menu-<%= index %>" data-mega-menu-id="<%= index %>">
     <div class="mega-menu-header">
       <h3><%= cat.name %></h3>
     </div>
     <div class="mega-menu-content">
-      <% 12.times do %>
-      <a href="#">Blah</a>
+      <% cat.sub_categories.each do |sub| %>
+        <%= link_to sub.name, display_category_path(sub) %>
       <% end %>
     </div>
   </div>

@@ -1,3 +1,5 @@
+=begin
+
 posts_body_array = [
   "<p>Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing prudent waiting in be. Comparison age not pianoforte increasing delightful now. Insipidity sufficient dispatched any reasonably led ask. Announcing if attachment resolution sentiments admiration me on diminution.</p><p>Arrived totally in as between private. Favour of so as on pretty though elinor direct. Reasonable estimating be alteration we themselves entreaties me of reasonably. Direct wished so be expect polite valley. Whose asked stand it sense no spoil to. Prudent you too his conduct feeling limited and. Side he lose paid as hope so face upon be. Goodness did suitable learning put.</p>
 <p>Case read they must it of cold that. Speaking trifling an to unpacked moderate debating learning. An particular contrasted he excellence favourable on. Nay preference dispatched difficulty continuing joy one. Songs it be if ought hoped of. Too carriage attended him entrance desirous the saw. Twenty sister hearts garden limits put gay has. We hill lady will both sang room by. Desirous men exercise overcame procured speaking her followed.</p>
@@ -248,7 +250,7 @@ posts_body_array = [
   #   ['Podcasts', "headphones"],
   #   ['eBooks', "book"]
   # ]
-  
+
   [
     ['Entertainment', "ticket"],
     ['Lifestyle', "ticket"],
@@ -302,3 +304,26 @@ Post.all.each_with_index do |post, index|
 
 
 end
+=end
+categories = ['Entertainment', 'Lifestyle', 'Food & Drink', 'Educational']
+
+sub_categories = [
+  ['Music', 'Movies', 'TV Shows', 'Music Videos', 'Concerts', 'Podcasts'],
+  ['Financial Planning', 'Home Organization', 'Work / Life Balance', 'Parenting', 'Budgetting', 'Health & Fitness', 'Instruments', 'Self Improvement'],
+  ['Food', 'Alcohol'],
+  ['Recommended Online Courses', 'Recommended Books', 'Recommended eBooks', 'DIY', 'LifeHacks']
+]
+
+categories.each_with_index do |cat, index|
+  main_cat = Category.create(name: cat)
+  
+  sub_categories[index].each do |sub|
+    Category.create(name: sub, parent_id: main_cat.id)
+  end
+end
+
+
+
+
+
+Author.create(email_address: 'sal', name: 'sal', bio: 'blah', password: 'sal', password_confirmation: 'sal' )
