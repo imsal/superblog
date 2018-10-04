@@ -20,7 +20,9 @@
 
   <div class="field">
     <%= form.label :parent_id %>
-    <%= form.text_field :parent_id %>
+    <%= form.select :parent_id,
+                    options_from_collection_for_select(Category.main_categories, :id, :name),
+                    { prompt: "----" } %>
   </div>
 
 
