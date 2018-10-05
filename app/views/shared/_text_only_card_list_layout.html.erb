@@ -5,6 +5,7 @@
 <div id="card-wrapper" class="only-text-cards">
 
 <% iteration.each do |post| %>
+<% if post.main_image.attached? %>
 
 <%= link_to completed_display_post_path(post), class: 'article-link card three-col', data: {created_at: post.created_at.strftime('%Y%m%d'), category: post.category.name, title: post.title, view_count: post.page_count} do %>
 
@@ -23,6 +24,8 @@
 </article>
 <% end %>
 
+
+<% end %>
 <% end %>
 
 </div>
