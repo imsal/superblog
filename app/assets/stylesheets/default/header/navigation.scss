@@ -16,7 +16,6 @@ header.header {
   width: 100%;
   padding: 0;
   font-weight: bold;
-  // background-color: $blue;
   background-color: #186c8b;
   position: fixed;
   top: 0;
@@ -96,7 +95,6 @@ header.header {
 
   .spacer {
     width: 100%;
-    // background-color: #208eb6;
     // height is set by jquery
   }
 
@@ -214,12 +212,6 @@ header.header {
   position: fixed;
   z-index: 5;
 
-  // .mega-menu-header {
-  //   h3 {
-  //     padding: 2rem;
-  //     color: #fff;
-  //   }
-  // }
   .mega-menu-content {
     padding: 1.5rem;
     display: grid;
@@ -228,7 +220,6 @@ header.header {
     a {
       padding: 1rem;
       color: #fff;
-      // display: inline;
     }
   }
 }
