@@ -4,6 +4,7 @@ class Subscriber < ApplicationRecord
 
   before_save :downcase_email
   before_create :create_activation_digest
+  before_create :create_unsubscribe_digest
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
@@ -34,6 +35,10 @@ class Subscriber < ApplicationRecord
     update_columns(activated: true, activated_at: Time.now)
   end
 
+  def unsubscribe
+    update_columns(activated: false, unsubscribed: true, unsubscribed_at: Time.now)
+  end
+
   # Sends the activation email
   def send_activation_email
     SubscriberMailer.account_activation(self).deliver_now
@@ -49,6 +54,11 @@ class Subscriber < ApplicationRecord
   def create_activation_digest
     self.activation_token = Subscriber.new_token
     self.activation_digest = Subscriber.digest(activation_token)
+  end
+
+  def create_unsubscribe_digest
+    self.activation_token = Subscriber.new_token
+    self.unsubscribe_digest = Subscriber.digest(activation_token)
   end
 
 end

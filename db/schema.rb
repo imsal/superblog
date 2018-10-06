@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2018_10_06_040247) do
     t.datetime "activated_at"
     t.boolean "unsubscribed", default: false
     t.string "unsubscribe_digest"
-    t.datetime "ubsubscribed_at"
+    t.datetime "unsubscribed_at"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|

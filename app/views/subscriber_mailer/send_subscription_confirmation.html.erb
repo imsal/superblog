@@ -6,5 +6,8 @@
 
   <body>
     <h1>Welcome to the family!!!!!</h1>
+
+    <%= link_to 'Unsubscribe', edit_account_activation_url(@subscriber.activation_token,
+                                                        email: @subscriber.email) %>
   </body>
 </html>
