@@ -83,3 +83,33 @@ h2.welcome-title {
     }
   }
 }
+
+
+
+
+
+
+.top-posts-wrapper {
+
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 66%;
+
+  .top-posts-left {
+
+    text-align: center;
+
+  }
+  .top-posts-right {
+
+    text-align: left;
+
+    ul {
+      li {
+        padding: 1rem;
+      }
+    }
+
+  }
+}
