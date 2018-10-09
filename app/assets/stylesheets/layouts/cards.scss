@@ -77,6 +77,21 @@
         .card-contents {
           background-color: #fff;
 
+          .card-tag-wrapper  {
+            display: flex;
+            flex-wrap: nowrap;
+            // padding: 2rem 2rem 0 2rem;
+
+            p {
+              color: #000;
+              flex: 1;
+              font-size: 0.85em;
+              // text-align: center;
+              color: rgba(184,64,21, 1);
+              // text-decoration: underline;
+            }
+          }
+
 
 
 
@@ -113,6 +128,8 @@
         text-align: center;
         // float: right;
       }
+
+
     }
   }
 }

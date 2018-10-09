@@ -9,6 +9,8 @@
 
 <%= link_to completed_display_post_path(post), class: 'article-link card three-col', data: {created_at: post.created_at.strftime('%Y%m%d'), category: post.category.name, title: post.title, view_count: post.page_count} do %>
 
+
+
 <article>
 
 
@@ -22,9 +24,17 @@
 
   <div class="card-contents">
 
-    <h4 class="card-title"><%= post.title.titleize %></h4>
+
+    <h4 class="card-title"><%= post.title.titleize %> (<%= post.category.name %>)</h4>
+
+
     <p class="card-summary"><%= post.summary %></p>
 
+    <div class="card-tag-wrapper">
+      <% post.tags.each do |tag| %>
+        <p><%= tag.name %></p>
+      <% end %>
+    </div>
 
   </div>
 
@@ -33,7 +43,11 @@
 
 </article>
 
-<h6 class="card-tag impact"><%= post.category.name %></h6>
+<!-- <h6 class="card-tag impact"><%= post.category.name %></h6> -->
+
+<!-- <h4><%= post.category.name %></h4> -->
+
+
 <% end %>
 
 
