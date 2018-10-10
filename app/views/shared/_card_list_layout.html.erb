@@ -1,5 +1,4 @@
 
-<!-- Posts -->
 <section id="card-container">
 
 <div id="card-wrapper">
@@ -20,6 +19,7 @@
 
   <div class="card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "832x590") %>)">
   </div>
+
   </div>
 
   <div class="card-contents">
@@ -38,14 +38,8 @@
 
   </div>
 
-
-
-
 </article>
 
-<!-- <h6 class="card-tag impact"><%= post.category.name %></h6> -->
-
-<!-- <h4><%= post.category.name %></h4> -->
 
 
 <% end %>
