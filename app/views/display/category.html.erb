@@ -4,4 +4,4 @@
 
 <%= render 'shared/card_list_layout', title: @category.name, iteration: @posts  %>
 
-<%= will_paginate @posts %>
+<%= will_paginate @posts, inner_window: 3, outer_window: 3 %>

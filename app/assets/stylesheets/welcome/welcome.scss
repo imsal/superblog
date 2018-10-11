@@ -107,9 +107,31 @@ h2.welcome-title {
 
     ul {
       li {
-        padding: 1rem;
+          padding: 1rem;
+        a {
+          text-decoration: none;
+        // margin: 1rem 0;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        letter-spacing: 0.02em;
+        color: #000;
+        // font-weight: bold;
+
+      }
       }
     }
 
   }
+}
+
+
+
+
+.card-title {
+
+}
+
+p {
+  margin-top: 1rem;
+
 }
