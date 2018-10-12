@@ -88,42 +88,42 @@ h2.welcome-title {
 
 
 
-
-.top-posts-wrapper {
-
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto 66%;
-
-  .top-posts-left {
-
-    text-align: center;
-
-  }
-  .top-posts-right {
-
-    text-align: left;
-
-    ul {
-      li {
-          padding: 1rem;
-        a {
-          text-decoration: none;
-        // margin: 1rem 0;
-        font-size: 1.2em;
-        line-height: 1.4em;
-        letter-spacing: 0.02em;
-        color: #000;
-        // font-weight: bold;
-
-      }
-      }
-    }
-
-  }
-}
-
+// 
+// .top-posts-wrapper {
+//
+//   width: 80%;
+//   margin: auto;
+//   display: grid;
+//   grid-template-columns: auto 66%;
+//
+//   .top-posts-left {
+//
+//     text-align: center;
+//
+//   }
+//   .top-posts-right {
+//
+//     text-align: left;
+//
+//     ul {
+//       li {
+//           padding: 1rem;
+//         a {
+//           text-decoration: none;
+//         // margin: 1rem 0;
+//         font-size: 1.2em;
+//         line-height: 1.4em;
+//         letter-spacing: 0.02em;
+//         color: #000;
+//         // font-weight: bold;
+//
+//       }
+//       }
+//     }
+//
+//   }
+// }
+//
 
 
 
@@ -134,4 +134,14 @@ h2.welcome-title {
 p {
   margin-top: 1rem;
 
+}
+
+
+.author-authors {
+  display: block;
+  width: 50%;
+  margin: auto;
+  // text-align: center;
+  box-sizing: border-box;
+  border-radius: 100%;
 }

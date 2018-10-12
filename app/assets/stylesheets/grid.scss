@@ -1,0 +1,99 @@
+.container {
+  margin: auto;
+  width: 80%;
+  padding: 10%;
+
+  @media only screen and (min-width: 615px) {
+    width: 70%;
+    padding: 5%;
+  }
+
+  @media only screen and (min-width: 1180px) {
+    width: 50%;
+    padding: 2.5%;
+  }
+}
+
+.container + .no-top-padding {
+  padding-top: 0;
+}
+
+.container + .only-side-margins {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+.grid-container {
+  margin: auto;
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  @media only screen and (min-width: 615px) {
+    padding: 5%;
+  }
+
+  @media only screen and (min-width: 1180px) {
+    padding: 2.5%;
+  }
+
+  .three-col {
+    width: 100%;
+  }
+  .two-col {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (min-width: 615px) {
+  .grid-container .three-col {
+    width: 50%;
+  }
+
+  .grid-container .two-col {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 940px) {
+  .grid-container .three-col {
+    width: 33.333%;
+  }
+}
+
+
+.grid-container.no-collapse {
+  .three-col {
+    width: 33.333% !important;
+  }
+  .two-col {
+    width: 50% !important;
+  }
+}
+
+
+
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// [class*="col-"]{
+//   display: block;
+// }
+
+// .col-1 {width: 1/12*100%;}
+// .col-2 {width: 2/12*100%;}
+// .col-3 {width: 3/12*100%;}
+// .col-4 {width: 4/12*100%;}
+// .col-5 {width: 5/12*100%;}
+// .col-6 {width: 6/12*100%;}
+// .col-7 {width: 7/12*100%;}
+// .col-8 {width: 8/12*100%;}
+// .col-9 {width: 9/12*100%;}
+// .col-10 {width: 10/12*100%;}
+// .col-11 {width: 11/12*100%;}
+// .col-12 {width: 100%;}

@@ -8,13 +8,42 @@
 </section>
 
 
+<div class="row">
 
-<div class="top-posts-wrapper">
-  <div class="top-posts-left">
+
+<div class="col-3">
+  CAKE
+</div>
+<div class="col-3">
+  CAKE
+</div>
+<div class="col-3">
+  CAKE
+</div>
+<div class="col-3">
+  CAKE
+</div>
+<div class="col-3">
+  CAKE
+</div>
+<div class="col-9">
+  CAKE
+</div>
+
+</div>
+
+
+
+<div class="grid-container">
+
+  <div class="three-col">
     <h2>Featured</h2>
   </div>
 
-  <div class="top-posts-right">
+  <div class="three-col">
+    <h2>Featured</h2>
+  </div>
+  <div class="three-col">
     <h2>Popular</h2>
     <ul>
       <% Post.last(10).each do |post| %>
@@ -25,6 +54,8 @@
     </ul>
   </div>
 </div>
+
+
 
 
 
@@ -40,7 +71,11 @@
 <%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>
 
 
-
+<div class="grid-container no-collapse">
+  <% 6.times do %>
+  <div class="three-col"><%= image_tag (asset_url 'about_me.jpg'), class: 'author-authors' %></div>
+  <% end %>
+</div>
 
 
 

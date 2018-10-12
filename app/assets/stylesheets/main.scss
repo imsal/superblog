@@ -1,27 +1,4 @@
-.container {
-  margin: auto;
-  width: 80%;
-  padding: 10%;
 
-  @media only screen and (min-width: 615px) {
-    width: 70%;
-    padding: 5%;
-  }
-
-  @media only screen and (min-width: 1180px) {
-    width: 50%;
-    padding: 2.5%;
-  }
-}
-
-.container + .no-top-padding {
-  padding-top: 0;
-}
-
-.container + .only-side-margins {
-  padding-top: 0;
-  padding-bottom: 0;
-}
 
 form {
 box-sizing: border-box;
