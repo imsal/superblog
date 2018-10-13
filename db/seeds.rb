@@ -1,4 +1,4 @@
-Author.create(email_address: 'sal', name: 'sal', bio: 'blah', password: 'sal', password_confirmation: 'sal' )
+Author.create(email_address: 'saltad347@gmail.com', name: 'sal', bio: 'blah', password: 'blah123', password_confirmation: 'blah123' )
 
 categories = ['Entertainment', 'Lifestyle', 'Recipes', 'Educational']
 
