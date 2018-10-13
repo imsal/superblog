@@ -74,9 +74,12 @@
   }
 }
 
-
+// *********** grid ***********
 
 .row {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
 }
@@ -91,7 +94,7 @@
 
 }
 
-@media only screen and (min-width: 940px) {
+// @media only screen and (min-width: 940px) {
   .col-1 {width: 1/12*100%;}
   .col-2 {width: 2/12*100%;}
   .col-3 {width: 3/12*100%;}
@@ -104,7 +107,7 @@
   .col-10 {width: 10/12*100%;}
   .col-11 {width: 11/12*100%;}
   .col-12 {width: 100%;}
-}
+// }
 
 .row-test {
   margin-top: 20px;
