@@ -14,17 +14,27 @@
 
 <div class="row">
   <div class="col-8">
-    <%= image_tag 'cat.jpg', class: 'test_featured_image' %>
+    <%#= image_tag 'cat.jpg', class: 'test_featured_image' %>
+        <%#= image_tag 'sample_hero.jpg', class: 'test_featured_image' %>
+      <div class="image-height-wrapper">
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)"></div>
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)"></div>
+
+      </div>
   </div>
+
   <div class="col-4">
-    <h2>Popular</h2>
-    <ul>
-      <% Post.last(10).each do |post| %>
-      <li><%= link_to post.title, display_post_path(post) %></li>
-      <li>900 views</li>
-      <% end %>
-    </ul>
+    <div class="popular-posts">
+      <h2>Trending</h2>
+      <ul>
+        <% Post.last(10).each do |post| %>
+        <li><%= link_to post.title, display_post_path(post) %></li>
+        <li>900 views</li>
+        <% end %>
+      </ul>
+    </div>
   </div>
+
 </div>
 
 
