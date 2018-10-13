@@ -1,13 +1,4 @@
 
-<%= render 'layouts/grid_test' %>
-
-
-
-
-
-
-
-
 
 <section class="welcome-page-full-hero">
 
@@ -22,10 +13,10 @@
 
 
 <div class="row">
-  <div class="col-9">
+  <div class="col-8">
     <%= image_tag 'cat.jpg', class: 'test_featured_image' %>
   </div>
-  <div class="col-3">
+  <div class="col-4">
     <h2>Popular</h2>
     <ul>
       <% Post.last(10).each do |post| %>
@@ -42,12 +33,12 @@
 
 
 <h2 class="welcome-title">New Posts</h2>
-<%= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
+<%#= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
 <%= render 'shared/card_list_layout', iteration: Post.last(6)  %>
 <%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>
 
 <h2 class="welcome-title">Recommended Posts</h2>
-<%= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
+<%#= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
 <%= render 'shared/card_list_layout', iteration: Post.last(6)  %>
 <%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>
 
