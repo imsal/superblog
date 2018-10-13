@@ -21,9 +21,9 @@
   <%= form.file_field :profile_image %>
 </div>
 
-<% if post.profile_image.attached? %>
-  <%= image_tag rails_blob_url(post.profile_image), style: 'height: 100px; width: auto;' %>
-  <%= link_to 'Delete Main Image', delete_attachment_url(id: post.profile_image.id),
+<% if author.profile_image.attached? %>
+  <%= image_tag rails_blob_url(author.profile_image), style: 'height: 100px; width: auto;' %>
+  <%= link_to 'Delete Main Image', delete_attachment_url(id: author.profile_image.id),
                               method: :delete,
                               confirm: { data: 'Are you sure?' },
                               style: 'display: block;' %>
