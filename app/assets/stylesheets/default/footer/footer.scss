@@ -3,11 +3,11 @@
   background-color: #16637f;//#175369;//#158db8;
   color: white;
 
-  .row {
+  .footer-row {
     display: grid;
     grid-template-columns: 50% 50%;
 
-    .col-1 {
+    .first-col {
       padding: 2.5rem;
       box-sizing: border-box;
       margin: auto;
@@ -37,7 +37,7 @@
       }
     }
 
-    .col-2 {
+    .second-col {
       padding: 2.5rem;
       box-sizing: border-box;
 
@@ -90,10 +90,10 @@
 
 @media all and (max-width: 979px) {
   .main-footer {
-    .row {
+    .footer-row {
       display: block;
 
-      .col-1 {
+      .first-col {
         border: 0;
         padding-bottom: 0;
 
@@ -107,7 +107,7 @@
         }
       }
 
-      .col-2 {
+      .second-col {
         border: 0;
 
         h4 {

@@ -1,4 +1,14 @@
 
+<%= render 'layouts/grid_test' %>
+
+
+
+
+
+
+
+
+
 <section class="welcome-page-full-hero">
 
   <div class="hero-text">
@@ -8,49 +18,20 @@
 </section>
 
 
+
+
+
 <div class="row">
-
-
-<div class="col-3">
-  CAKE
-</div>
-<div class="col-3">
-  CAKE
-</div>
-<div class="col-3">
-  CAKE
-</div>
-<div class="col-3">
-  CAKE
-</div>
-<div class="col-3">
-  CAKE
-</div>
-<div class="col-9">
-  CAKE
-</div>
-
-</div>
-
-
-
-<div class="grid-container">
-
-  <div class="three-col">
-    <h2>Featured</h2>
+  <div class="col-9">
+    <%= image_tag 'cat.jpg', class: 'test_featured_image' %>
   </div>
-
-  <div class="three-col">
-    <h2>Featured</h2>
-  </div>
-  <div class="three-col">
+  <div class="col-3">
     <h2>Popular</h2>
     <ul>
       <% Post.last(10).each do |post| %>
       <li><%= link_to post.title, display_post_path(post) %></li>
       <li>900 views</li>
       <% end %>
-
     </ul>
   </div>
 </div>
