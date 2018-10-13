@@ -157,15 +157,17 @@ p {
 
 
 .popular-posts {
+  background-color: #fff;
   padding: 2.5rem;
-  height: 100%;
-  width: 100%;
   box-sizing: border-box;
 
   margin: auto;
 
+
+
   h2 {
     margin: 0.5rem 0;
+      // font-family: 'Lobster', cursive;
   }
 
   ul {
@@ -186,5 +188,37 @@ p {
 
     }
     }
+  }
+}
+
+
+.blue-background {
+    background-color: #e8f3f7;
+}
+
+.subscribe-sidebar {
+
+  padding: 2.5rem;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  margin: auto;
+
+  h4 {
+    text-align: center;
+  }
+
+
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
   }
 }
