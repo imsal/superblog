@@ -1,4 +1,6 @@
 Author.create(email_address: 'saltad347@gmail.com', name: 'sal', bio: 'blah', password: 'blah123', password_confirmation: 'blah123' )
+Author.last.profile_image.attach(io: File.open('app/assets/images/about_me.jpg'), filename: "/about_me.jpg", content_type: 'image/jpg')
+
 
 categories = ['Entertainment', 'Lifestyle', 'Recipes', 'Educational']
 
@@ -30,21 +32,51 @@ post_body ="<h2>Chapter too parties its letters nor</h2>
 <p>Do commanded an shameless we disposing do. Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet. Remainder provision an in intention. Saw supported too joy promotion engrossed propriety. Me till like it sure no sons.</p>
 <p>Acceptance middletons me if discretion boisterous travelling an. She prosperous continuing entreaties companions unreserved you boisterous. Middleton sportsmen sir now cordially ask additions for. You ten occasional saw everything but conviction. Daughter returned quitting few are day advanced branched. Do enjoyment defective objection or we if favourite. At wonder afford so danger cannot former seeing. Power visit charm money add heard new other put. Attended no indulged marriage is to judgment offering landlord.</p>"
 
-# Category.all_sub_categories.each_with_index do |sub, index|
 
-Category.last(1).each_with_index do |sub, index|
 
-  12.times do |x|
-    Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
-        active: true, activation_date: Time.now, tag_list: 'comedy, horror, thriller',
-        summary: 'This is a random summary to type because I cant think of anything else to write', author_id: Author.last.id)
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+if Rails.env == "development"
+
+  Category.all.each_with_index do |sub, index|
+
+    12.times do |x|
+      Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
+          active: true, activation_date: Time.now, tag_list: 'comedy, horror, thriller',
+          summary: 'This is a random summary to type because I cant think of anything else to write', author_id: Author.last.id)
+    end
+
   end
 
+
+elsif Rails.env = "production"
+
+  # only puts articles on LifeHacks for Heroku limit reasons
+  Category.last(1).each_with_index do |sub, index|
+
+    12.times do |x|
+      Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
+          active: true, activation_date: Time.now, tag_list: 'comedy, horror, thriller',
+          summary: 'This is a random summary to type because I cant think of anything else to write', author_id: Author.last.id)
+    end
+
+  end
+
+
 end
+
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # end
 
 Post.all.each_with_index do |post, index|
+  post.main_image.attach(io: File.open('app/assets/images/stock_images' + "/stock-image-#{(index%14)+1}.jpg"), filename: "/stock-image-#{(index%14)+1}.jpg", content_type: 'image/jpg')
+
   post.main_image.attach(io: File.open('app/assets/images/stock_images' + "/stock-image-#{(index%14)+1}.jpg"), filename: "/stock-image-#{(index%14)+1}.jpg", content_type: 'image/jpg')
 
   post.images.attach(io: File.open('app/assets/images/stock_images' + "/stock-image-#{(index%6)+1}.jpg"), filename: "/stock-image-#{(index%6)+1}.jpg", content_type: 'image/jpg')
