@@ -30,6 +30,10 @@
 
     <p class="card-summary"><%= post.summary %></p>
 
+    <p><%= post.author.name %></p>
+
+    <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+
     <div class="card-tag-wrapper">
       <% post.tags.each do |tag| %>
         <p><%= tag.name %></p>

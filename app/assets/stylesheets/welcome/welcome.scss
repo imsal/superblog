@@ -1,19 +1,22 @@
 .left-hero-text, .right-hero-text {
   position: relative;
-  top: 0;
+  // top: 0;
+  bottom: 0;
   background-color: rgba(184,64,21, 1);
   color: #fff;
   padding: 2rem;
   text-align: center;
+
+  // font-size: 50%
 }
 
-.left-hero-text {
-  left: 0;
-}
-
-.right-hero-text {
-  right: 0;
-}
+// .left-hero-text {
+//   left: 0;
+// }
+//
+// .right-hero-text {
+//   right: 0;
+// }
 
 
 
