@@ -1,10 +1,8 @@
 
-
+<!-- featured article 1 -->
 <section class="welcome-page-full-hero">
 
-  <div class="hero-text">
-      <!-- <h1 class="impact">ProveYourWealth</h1> -->
-  </div>
+      <h3 class="right-hero-text">Name of Some Article</h3>
 
 </section>
 
@@ -12,25 +10,29 @@
 <div class="row">
   <div class="col-8">
       <div class="image-height-wrapper">
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)"></div>
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)"></div>
+        <!-- featured article 2 -->
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)">
+          <h3 class="left-hero-text">Other Article</h3>
+        </div>
+        <!-- featured article 3 -->
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)">
+          <h3 class="left-hero-text">Other Article Number 2</h3>
+        </div>
       </div>
   </div>
 
   <div class="col-4 welcome-initial-sidebar">
 
+    <h2 class="welcome-title"><%= category.name %></h2>
+
     <div class="popular-posts">
 
-
-
-      <h2><%= sidebar_title %></h2>
       <ul>
         <% Post.last(10).each do |post| %>
         <li><%= link_to post.title, display_post_path(post) %></li>
         <li>900 views</li>
         <% end %>
       </ul>
-
 
     </div>
 
@@ -61,7 +63,7 @@
 
 
 
-<h2 class="welcome-title">New Posts</h2>
+<!-- <h2 class="welcome-title">New Posts</h2> -->
 <%#= render 'shared/two_column_card_layout', iteration: Post.first(2)  %>
 <%= render 'shared/card_list_layout', iteration: Post.last(6)  %>
 <%= render 'shared/text_only_card_list_layout', iteration: Post.last(6)  %>

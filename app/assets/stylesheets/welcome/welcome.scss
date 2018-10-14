@@ -1,3 +1,27 @@
+.left-hero-text {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(23,83,105, 0.3), rgba(23,83,105, 0.3)), ;
+  display: inline-block;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.right-hero-text {
+  position: relative;
+  top: 0;
+  right: 0;
+  background: linear-gradient(rgba(23,83,105, 0.3), rgba(23,83,105, 0.3)), ;
+  display: inline-block;
+  color: #fff;
+  padding: 1.5rem;
+  float: right;
+
+}
+
+
+
 section.welcome-page-full-hero {
   background-image: asset-url('sample_hero.jpg');
   background-size: cover;
@@ -5,34 +29,12 @@ section.welcome-page-full-hero {
   width: 100%;
   background-position: center;
 
-  .hero-text {
-    position: relative;
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // background-color: rgba(255,255,255, 0.8);
-    // text-shadow: 6px 6px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-    color: #fff;
-    // color: #fff;
-    // border: 4px solid rgba(0 ,0 ,0 , 0.8);
-    //
-    // h1 {
-    //   padding: 0.3em;
-    //   color: rgba(184,64,21, 0.8);
-    //   span {
-    //     color: rgba(32,142,182, 0.8);
-    //   }
-    // }
-
-    // h1:nth-of-type(2) {
-    //   background-color: rgba(32,142,182, 0.8);
-    //   text-align: center;
-    // }
+  // .left-hero-text {
 
 
 
-  }
+
+
 
 
 }
@@ -87,36 +89,6 @@ h2.welcome-title {
 
 
 
-
-//
-// .top-posts-wrapper {
-//
-//   width: 80%;
-//   margin: auto;
-//   display: grid;
-//   grid-template-columns: auto 66%;
-//
-//   .top-posts-left {
-//
-//     text-align: center;
-//
-//   }
-//   .top-posts-right {
-//
-//     text-align: left;
-//
-
-
-//   }
-// }
-//
-
-
-
-.card-title {
-
-}
-
 p {
   margin-top: 1rem;
 
@@ -146,10 +118,9 @@ p {
 
 .image-height-wrapper {
   .image-half-height {
-    // height: 50%;
     background-size: cover;
     background-position: center;
-    padding: 45%;
+    padding-bottom: 80%;
     box-sizing: border-box;
   }
 }
@@ -159,15 +130,9 @@ p {
 .popular-posts {
   background-color: #fff;
   padding: 2.5rem;
-  // box-sizing: border-box;
-
-  // margin: auto;
-
-
 
   h2 {
     margin: 0.5rem 0;
-      // font-family: 'Lobster', cursive;
   }
 
   ul {
@@ -192,10 +157,6 @@ p {
 }
 
 
-// .blue-background {
-//     background-color: #e8f3f7;
-// }
-
 .welcome-initial-sidebar {
   // position: relative;
   display: flex;
@@ -219,13 +180,8 @@ p {
 
   }
 
-  form {
 
-  }
 
-footer {
-}
-  // }
     h4 {
       text-align: center;
     }
@@ -242,7 +198,5 @@ footer {
       width: 100%;
       box-sizing: border-box;
     }
-  // }
-
 
 }

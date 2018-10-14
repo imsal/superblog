@@ -1,9 +1,9 @@
 
 <% Category.main_categories.each_with_index do |category, index| %>
   <% if index % 2 == 0 %>
-    <%= render 'welcome_card_layout_1', sidebar_title: category.name %>
+    <%= render 'welcome_card_layout_1', category: category %>
   <% else %>
-    <%= render 'welcome_card_layout_2', sidebar_title: category.name %>
+    <%= render 'welcome_card_layout_2', category: category %>
   <% end %>
 <% end %>
 
