@@ -1,46 +1,4 @@
-<div class="top-featured">
-  <div class="row">
-    <div class="col-6">
-
-      <%= link_to '#' do %>
-      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'cat.jpg' %>)">
-      </div>
-      <% end %>
-
-    </div>
-    <div class="col-6">
-      <%= link_to '#' do %>
-      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)">
-        <!-- <h3 class="left-hero-text">Other Article</h3> -->
-      </div>
-      <% end %>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-6">
-      <%= link_to '#' do %>
-      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'about_me.jpg' %>)">
-        <!-- <h3 class="left-hero-text">Other Article</h3> -->
-      </div>
-      <% end %>
-    </div>
-    <div class="col-6">
-      <%= link_to '#' do %>
-      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'master_favicon.jpg' %>)">
-        <!-- <h3 class="left-hero-text">Other Article</h3> -->
-      </div>
-      <% end %>
-    </div>
-  </div>
-
-
-
-</div>
-
-
-
+<%= render 'featured_posts' %>
 
 
 <% Category.main_categories.each_with_index do |category, index| %>
