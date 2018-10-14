@@ -117,12 +117,16 @@ p {
 
 
 .image-height-wrapper {
+  display: grid;
+  grid-template-rows: 50% auto;
+
   .image-half-height {
     background-size: cover;
     background-position: center;
     padding-bottom: 80%;
     box-sizing: border-box;
   }
+
 }
 
 
