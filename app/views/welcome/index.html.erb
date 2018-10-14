@@ -1,3 +1,38 @@
+<div class="top-featured">
+  <div class="row">
+    <div class="col-6">
+      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'cat.jpg' %>)">
+        <!-- <h3 class="left-hero-text">Other Article</h3> -->
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)">
+        <!-- <h3 class="left-hero-text">Other Article</h3> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-6">
+      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'about_me.jpg' %>)">
+        <!-- <h3 class="left-hero-text">Other Article</h3> -->
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="welcome-featured-image" style="background-image: url(<%= asset_url 'master_favicon.jpg' %>)">
+        <!-- <h3 class="left-hero-text">Other Article</h3> -->
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
 
 <% Category.main_categories.each_with_index do |category, index| %>
   <% if index % 2 == 0 %>
