@@ -1,9 +1,13 @@
 <div class="article-card <%= coltype %>">
 
+
+<div class="article-card-border">
 <%= link_to completed_display_post_path(post), class:'image-wrapper' do %>
 <div class="card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "832x590") %>)"><!-- blank --></div>
 <% end %>
 
+
+<div class="article-card-content">
 <h4 class="card-title"><%= link_to "#{post.title.titleize} (#{post.category.name})" ,completed_display_post_path(post) %></h4>
 
 <p class="card-summary"><%= post.summary %></p>
@@ -27,6 +31,6 @@
 
       <p><%= link_to post.author.name, author_path(post.author) %></p>
     </div>
-
-
+</div>
+</div>
     </div>

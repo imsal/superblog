@@ -117,6 +117,7 @@ $(document).on('turbolinks:load', function() {
 
   // ~~~~~~~~~~~~ SET CARDS TO SAME HEIGHT
 
+/*
   var maxTitleHeight = 0;
 
   $(".card-title").each(function(){
@@ -132,6 +133,6 @@ $(document).on('turbolinks:load', function() {
   });
 
   $(".card-summary").height(maxSummaryHeight);
-
+*/
 
 });
