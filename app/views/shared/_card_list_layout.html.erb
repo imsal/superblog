@@ -30,6 +30,17 @@
 
     <p class="card-summary"><%= post.summary %></p>
 
+
+    <div class="card-tag-wrapper">
+      <p>
+      <% post.tags.each do |tag| %>
+        <%= tag.name %>&nbsp;
+      <% end %>
+      </p>
+    </div>
+
+
+
     <hr/>
 
 
@@ -41,11 +52,7 @@
 
 
 
-    <div class="card-tag-wrapper">
-      <% post.tags.each do |tag| %>
-      <p><%= tag.name %></p>
-      <% end %>
-    </div>
+
 
   </div>
 

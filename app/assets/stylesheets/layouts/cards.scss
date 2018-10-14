@@ -56,21 +56,59 @@
           background-color: #fff;
 
           .card-tag-wrapper  {
-            display: flex;
-            flex-wrap: nowrap;
+            // display: flex;
+            // flex-wrap: nowrap;
 
             p {
-              color: #fff;
-              flex: 1;
-              font-size: 0.85em;
-              padding: 12px;
-              background-color: rgba(184,64,21, 1);
-              letter-spacing: 0.05em;
-              text-align: center;
+              // color: #fff;
+              // flex: 1;
+              // font-size: 0.85em;
+              // padding: 12px;
+              // background-color: rgba(184,64,21, 1);
+              // letter-spacing: 0.05em;
+              // text-align: center;
             }
           }
 
 
+
+/*
+          .card-tag-wrapper  {
+            position: relative;
+            margin: 1em;
+            overflow: hidden;
+
+            ul {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+              margin-left: -1px;
+
+              li {
+                flex-grow: 1;
+                flex-basis: auto;
+                margin: 0.25em 0;
+                padding: 0 1em;
+                text-align: center;
+                border-left: 1px solid #ccc;
+                background-color: #fff;
+
+                a {
+                  text-align: center;
+                  flex: 1 0 auto;
+                  color: #000;
+                  font-size: 1.1em;
+                  text-decoration: none;
+                  display: inline-block;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }*/
 
 
 
@@ -90,7 +128,6 @@
             font-size: 1em;
           }
 
-
           .card-bottom-info {
             display: flex;
             flex-wrap: nowrap;
@@ -102,24 +139,7 @@
             }
           }
         }
-
-
       }
-
-      .card-tag {
-        // position: absolute;
-        // bottom: 0;
-        // left: 2rem;
-        //
-        // padding: 12px;
-        // width: 25%;
-        // background-color: rgba(184,64,21, 1);
-        // color: white;
-        // letter-spacing: 0.05em;
-        // text-align: center;
-      }
-
-
     }
   }
 }
