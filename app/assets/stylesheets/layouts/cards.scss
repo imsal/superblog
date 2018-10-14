@@ -73,6 +73,8 @@
 
 
 
+
+
           .card-title {
             margin: 1rem 0;
             font-size: 1.2em;
@@ -86,6 +88,18 @@
             margin-top: 1rem;
             color: #000;
             font-size: 1em;
+          }
+
+
+          .card-bottom-info {
+            display: flex;
+            flex-wrap: nowrap;
+            p {
+              width: 50%;
+            }
+            p:nth-child(2) {
+              text-align: right;
+            }
           }
         }
 

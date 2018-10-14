@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :subscribers
+  # resources :subscribers
   get "privacy", to: 'static_pages#privacy_policy', as: "privacy"
   get "terms", to: 'static_pages#terms_of_use', as: "terms"
 
@@ -38,6 +38,8 @@ Rails.application.routes.draw do
     delete :delete_attachment, to: 'attachment_control#delete_attachment', as: 'delete_attachment'
     resources :categories, param: :slug, except: :show
     resources :inquiries, only: %i[index new create destroy]
+    resources :subscribers
+    
     # resources :subscribers, only: %i[index edit destroy]
     # get '/subscribers', to: 'subscribers#index'
       end
