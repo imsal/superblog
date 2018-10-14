@@ -1,94 +1,81 @@
-#card-container {
 
+#card-container {
   #card-wrapper {
     display: flex;
     flex-wrap: wrap;
-    // border-bottom: 0.01em solid #E6E6E6;
-    // padding-bottom: 2rem;
+    padding: 1rem;
 
-    .article-link {
-      text-decoration: none;
-      position: relative;
-      padding-bottom: 2rem;
+    .article-card {
+      box-sizing: border-box;
+      padding: 1rem;
 
-      &:hover {
-        cursor: pointer;
+      a {
+        text-decoration: none;
+      }
 
-        article {
-          .card-contents {
-            .card-title {
-              text-decoration: underline;
-            }
-          }
 
-          .card-image {
-            transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            /* IE 9 */
-            -moz-transform: scale(1.2);
-            /* Firefox */
-            -webkit-transform: scale(1.2);
-            /* Safari and Chrome */
-            -o-transform: scale(1.2);
-            /* Opera */
+      .image-wrapper {
+        display: block;
+        overflow: hidden;
+      }
+
+      .card-image {
+        padding-bottom: 70%;
+        background-size: cover;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+          -o-transform: scale(1.2);
+        }
+      }
+      .card-title {
+        font-size: 1.2em;
+        line-height: 1.4em;
+        letter-spacing: 0.02em;
+        margin: 1rem 0;
+        a {
+          color: #000;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
-
-      article {
-        margin: 2rem;
-
-        .card-image-wrapper {
-          overflow: hidden;
+      .card-summary {
+        p {
+          margin: 1rem 0;
         }
-
-        .card-image {
-          padding-bottom: 70%;
-          background-size: cover;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+      }
+      .card-tag-wrapper {
+        p {
+          margin: 1rem 0;
         }
+      }
+      hr {
 
-        .card-contents {
-          background-color: #fff;
+      }
 
-          .card-tag-wrapper  {
+      p {
+        margin-top: 1rem;
+        color: #000;
+        font-size: 1em;
+      }
+      .card-bottom-info {
+        display: flex;
+        flex-wrap: nowrap;
+        p {
+          width: 50%;
 
-            p {
-              margin: 1rem 0;
-              font-size: 80%;
-            }
-          }
-
-          .card-title {
-            margin: 1rem 0;
-            font-size: 1.2em;
-            line-height: 1.4em;
-            letter-spacing: 0.02em;
-            color: #000;
-            font-weight: bold;
-          }
-
-          p {
-            margin-top: 1rem;
-            color: #000;
-            font-size: 1em;
-          }
-
-          .card-bottom-info {
-            display: flex;
-            flex-wrap: nowrap;
-            p {
-              width: 50%;
-              
-            }
-            p:nth-child(2) {
-              text-align: right;
-            }
-          }
+        }
+        p:nth-child(2) {
+          text-align: right;
         }
       }
     }
@@ -97,21 +84,25 @@
 
 
 
+
+
+
+
 @media only screen and (min-width: 615px) {
-  #card-container .three-col {
+  #card-container #card-wrapper .three-col {
     width: 50%;
   }
 
-  #card-container .two-col {
+  #card-container #card-wrapper .two-col {
     width: 50%;
   }
 }
+
 @media only screen and (min-width: 940px) {
-  #card-container .three-col {
+  #card-container #card-wrapper .three-col {
     width: 33.333%;
   }
 }
-
 
 #card-container + #card-wrapper, .only-text-cards {
   padding-bottom: 0 !important;
