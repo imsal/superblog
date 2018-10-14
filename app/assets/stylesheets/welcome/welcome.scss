@@ -51,10 +51,16 @@ h1.centered {
 
 
 h2.welcome-title {
-  color: #fff;
+
   padding: 2rem 0;
   background-color: #175369;
   text-align: center;
+  font-family: "Lobster", cursive;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 
@@ -115,11 +121,16 @@ p {
   display: grid;
   grid-template-rows: 50% auto;
 
-  .image-half-height {
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 80%;
-    box-sizing: border-box;
+  a {
+
+    text-decoration: none;
+
+    .image-half-height {
+      background-size: cover;
+      background-position: center;
+      padding-bottom: 80%;
+      box-sizing: border-box;
+    }
   }
 
 }
