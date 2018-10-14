@@ -159,9 +159,9 @@ p {
 .popular-posts {
   background-color: #fff;
   padding: 2.5rem;
-  box-sizing: border-box;
+  // box-sizing: border-box;
 
-  margin: auto;
+  // margin: auto;
 
 
 
@@ -192,33 +192,57 @@ p {
 }
 
 
-.blue-background {
-    background-color: #e8f3f7;
+// .blue-background {
+//     background-color: #e8f3f7;
+// }
+
+.welcome-initial-sidebar {
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .subscribe-sidebar {
-
-  padding: 2.5rem;
-  display: block;
+  // width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  margin: auto;
+  display: block;
 
-  h4 {
-    text-align: center;
-  }
-
-
-  input[type="text"] {
+  background-color: #e8f3f7;
+  .inner-subscribe-sidebar {
+    // display: block;
     width: 100%;
     box-sizing: border-box;
-    text-align: center;
-  }
+    margin: auto;
+    padding: 2.5rem;
 
-  input[type="submit"] {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
 
   }
+
+  form {
+
+  }
+
+footer {
+}
+  // }
+    h4 {
+      text-align: center;
+    }
+
+
+    input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  // }
+
+
 }
