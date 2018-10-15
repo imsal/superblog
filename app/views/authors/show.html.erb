@@ -1,5 +1,5 @@
 <h2 class="tags-title"><%= @author.name %></h2>
 
-    <%= render 'shared/card_list_layout', iteration: @posts  %>
+<%= render 'shared/card_list_layout', iteration: @posts  %>
 
-    <%= will_paginate @posts, inner_window: 3, outer_window: 3 %>
+<%= will_paginate @posts, inner_window: 3, outer_window: 3 %>

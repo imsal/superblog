@@ -22,7 +22,7 @@
 
 
 <h4 class="card-title"><%= link_to post.title.titleize ,completed_display_post_path(post) %></h4>
-<h5 class="card-category"><%= post.category.name %></h5>
+<h5 class="card-category"><%= link_to post.category.name, display_category_path(post.category) %></h5>
 
 <hr/>
 
