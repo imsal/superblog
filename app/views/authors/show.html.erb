@@ -1,27 +1,5 @@
 <h2 class="tags-title"><%= @author.name %></h2>
 
-<div class="container">
-  <% @posts.each do |post| %>
+    <%= render 'shared/card_list_layout', iteration: @posts  %>
 
-  <%= link_to display_post_path(post), class: 'author-link' do %>
-
-      <div class="author-card">
-
-
-      <div class="author-card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "400x400") %>)">
-      </div>
-
-      <div class="author-card-text">
-        <h5><%= post.title%></h5>
-        <h6><%= post.created_at.strftime(("%B %d, %Y")) %></h6>
-      </div>
-            </div>
-
-      <% end %>
-
-  <% end %>
-
-    </div>
-
-
-    <%= will_paginate @posts %>
+    <%= will_paginate @posts, inner_window: 3, outer_window: 3 %>
