@@ -3,34 +3,49 @@
 
 <div class="article-card-border">
 <%= link_to completed_display_post_path(post), class:'image-wrapper' do %>
-<div class="card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "832x590") %>)"><!-- blank --></div>
+<div class="card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "832x590") %>)">
+
+</div>
 <% end %>
 
 
+<div class="card-tag-wrapper">
+
+  <% post.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag.name) %>
+  <% end %>
+
+</div>
+
+
 <div class="article-card-content">
-<h4 class="card-title"><%= link_to "#{post.title.titleize} (#{post.category.name})" ,completed_display_post_path(post) %></h4>
+
+
+<h4 class="card-title"><%= link_to post.title.titleize ,completed_display_post_path(post) %></h4>
+<h5 class="card-category"><%= post.category.name %></h5>
+
+<hr/>
+
 
 <p class="card-summary"><%= post.summary %></p>
 
 
-    <div class="card-tag-wrapper">
-      <p>
-      <% post.tags.each do |tag| %>
-        <%= link_to tag.name, tag_path(tag.name) %>&nbsp;
-      <% end %>
-      </p>
-    </div>
 
 
 
-    <hr/>
-
-
-    <div class="card-bottom-info">
-      <p><%= post.created_at.strftime("%B %d, %Y") %></p>
-
-      <p><%= link_to post.author.name, author_path(post.author) %></p>
-    </div>
+<div class="button-wrapper">
+<%= link_to 'READ MORE' ,completed_display_post_path(post), class: 'read-more-button' %>
 </div>
+
+</div>
+
+
+<div class="card-bottom-info">
+  <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+
+  <p><%= link_to post.author.name, author_path(post.author) %></p>
+</div>
+
+
 </div>
     </div>
