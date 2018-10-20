@@ -15,7 +15,7 @@
     <div class="image-height-wrapper">
       <% Post.last(2).each do |post| %>
         <%= link_to display_post_path(post) do %>
-          <div class="image-half-height" style="background-image: url(<%= rails_blob_url post.main_image %>)"></div>
+          <div class="image-half-height" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "720x720") %>)"></div>
         <% end %>
       <% end %>
     </div>
@@ -27,7 +27,7 @@
     <div class="image-height-wrapper">
       <% Post.first(10).last(2).each do |post| %>
         <%= link_to display_post_path(post) do %>
-          <div class="image-half-height" style="background-image: url(<%= rails_blob_url post.main_image %>)"></div>
+          <div class="image-half-height" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "720x720") %>)"></div>
         <% end %>
       <% end %>
     </div>
