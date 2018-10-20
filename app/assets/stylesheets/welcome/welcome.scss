@@ -124,6 +124,9 @@ p {
   display: grid;
   grid-template-rows: 50% auto;
 
+  //
+  height: 100%;
+
   a {
 
     text-decoration: none;
@@ -131,12 +134,16 @@ p {
     .image-half-height {
       background-size: cover;
       background-position: center;
-      padding-bottom: 80%;
+      padding-bottom: 100%;
       box-sizing: border-box;
     }
   }
 
 }
+
+
+
+
 
 
 
@@ -225,4 +232,17 @@ p {
   padding: 40%;
   background-size: cover;
   background-position: center;
+}
+
+
+.column-card-title {
+  text-align: center;
+  padding: 4rem 2rem;
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

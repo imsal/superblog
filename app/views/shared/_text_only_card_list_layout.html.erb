@@ -1,32 +1,41 @@
 
 <!-- Posts -->
+
+
+<!--
 <section id="card-container">
 
 <div id="card-wrapper" class="only-text-cards">
 
-<% iteration.each do |post| %>
-<% if post.main_image.attached? %>
+<%# iteration.each do |post| %>
 
-<%= link_to completed_display_post_path(post), class: 'article-link card two-col', data: {created_at: post.created_at.strftime('%Y%m%d'), category: post.category.name, title: post.title, view_count: post.page_count} do %>
+
+<%#= link_to completed_display_post_path(post), class: 'article-link card two-col', data: {created_at: post.created_at.strftime('%Y%m%d'), category: post.category.name, title: post.title, view_count: post.page_count} do %>
 
 <article>
 
-  <!-- <div class="card-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "832x590") %>)">
-
-    <h6 class="card-tag impact"><%= post.category.name %></h6>
-  </div> -->
-
   <div class="card-contents">
-    <h4 class="card-title"><%= post.title.titleize %></h4>
-    <p><%= post.summary %></p>
+    <h4 class="card-title"><%#= post.title.titleize %></h4>
+    <p><%#= post.summary %></p>
   </div>
 
 </article>
-<% end %>
+<%# end %>
 
 
-<% end %>
-<% end %>
+<%# end %>
 
 </div>
 </section>
+
+
+-->
+
+
+<div class="row">
+  <% iteration.each do |post| %>
+  <div class="col-6">
+    <h4 class="column-card-title"><%= link_to post.title, completed_display_post_path(post) %></h4>
+  </div>
+  <% end %>
+</div>
