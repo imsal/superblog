@@ -1,149 +1,67 @@
-
-
-
-
-<!-- <section class="welcome-page-full-hero">
-
-      <h3 class="left-hero-text">Name of Some Article</h3>
-
-</section> -->
-
-
-
 <div class="row">
-  <div class="col-4"><h2 class="welcome-title"><%= link_to "x", display_category_path(category) %></h2></div>
   <div class="col-4">
     <h2 class="welcome-title"><%= link_to "x", display_category_path(category) %></h2>
   </div>
-  <div class="col-4"><h2 class="welcome-title"><%= link_to category.name, display_category_path(category) %></h2></div>
+  <div class="col-4">
+    <h2 class="welcome-title"><%= link_to "x", display_category_path(category) %></h2>
+  </div>
+  <div class="col-4">
+    <h2 class="welcome-title"><%= link_to category.name, display_category_path(category) %></h2>
+  </div>
 </div>
-
-
-
-
-
-
-
-
 
 <div class="row">
 
-
-
-
-
-
-
   <div class="col-4">
-
 
     <div class="image-height-wrapper">
       <a href="#">
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)">
-        </div>
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)"></div>
       </a>
-
-
 
       <a href="#">
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)">
-        </div>
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)"></div>
       </a>
     </div>
 
-
   </div>
 
+  <div class="col-4">
 
+    <div class="image-height-wrapper">
+      <a href="#">
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'about_me.jpg' %>)"></div>
+      </a>
 
-<!--
-  <div class="col-8">
-      <div class="image-height-wrapper">
-
-        <%#= link_to "#" do %>
-          <div class="image-half-height" style="background-image: url(<%#= asset_url 'cat.jpg' %>)">
-            <h2 class="right-hero-text">Name of Some Article</h2>
-          </div>
-        <%# end %>
-
-        <%#= link_to "#" do %>
-          <div class="image-half-height" style="background-image: url(<%#= asset_url 'sample_hero.jpg' %>)">
-            <h2 class="right-hero-text">Name of Some Article</h2>
-          </div>
-        <%# end %>
-      </div>
-  </div>
--->
-
-
-<div class="col-4">
-
-
-  <div class="image-height-wrapper">
-    <a href="#">
-      <div class="image-half-height" style="background-image: url(<%= asset_url 'about_me.jpg' %>)">
-      </div>
-    </a>
-
-
-
-    <a href="#">
-      <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)">
-      </div>
-    </a>
-  </div>
-
-
-</div>
-
-
-
-
-
-
-<div class="col-4 welcome-initial-sidebar">
-
-  <!-- <h2 class="welcome-title"><%= link_to category.name, display_category_path(category) %></h2> -->
-
-  <div class="popular-posts">
-
-    <ul>
-      <% Post.last(5).each do |post| %>
-      <li><%= link_to post.title, display_post_path(post) %></li>
-      <li>900 views</li>
-      <% end %>
-    </ul>
-
-
-  </div>
-
-  <!-- Subscribe form???? -->
-
-
-  <div class="subscribe-sidebar">
-      <div class="inner-subscribe-sidebar">
-      <h4>Subscribe</h4>
-      <%= render 'shared/subscribe_form' %>
+      <a href="#">
+        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)"></div>
+      </a>
     </div>
+
   </div>
 
+  <div class="col-4 welcome-initial-sidebar">
 
+    <div class="popular-posts">
 
+      <ul>
+        <% Post.last(5).each do |post| %>
+          <li><%= link_to post.title, display_post_path(post) %></li>
+          <li>900 views</li>
+        <% end %>
+      </ul>
 
+    </div>
 
+    <div class="subscribe-sidebar">
+      <div class="inner-subscribe-sidebar">
+        <h4>Subscribe</h4>
+        <%= render 'shared/subscribe_form' %>
+      </div>
+    </div>
 
-
+  </div>
 
 </div>
 
-
-
-</div>
-
-
-
-
-
-
-
-<%= render 'shared/text_only_card_list_layout', iteration: Post.last(4)  %>
+<%= render 'shared/text_only_card_list_layout', iteration: Post.last(4) %>
