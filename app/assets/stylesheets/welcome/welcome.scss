@@ -10,16 +10,6 @@
   // font-size: 50%
 }
 
-// .left-hero-text {
-//   left: 0;
-// }
-//
-// .right-hero-text {
-//   right: 0;
-// }
-
-
-
 section.welcome-page-full-hero {
   background-image: asset-url('sample_hero.jpg');
   background-size: cover;
@@ -27,34 +17,19 @@ section.welcome-page-full-hero {
   width: 100%;
   background-position: center;
 
-  // .left-hero-text {
-
-
-
-
-
-
-
 }
 
 h1.welcome {
-  // margin-left: 6rem;
   padding: 1em 1em 0 1em;
-  // border-bottom: 0.1em groove rgba(0,0,0,0.4);
-  // border-style:  ridge outset dotted groove double dashed;
   font-size: 2.8em;
   text-decoration: underline;
-  // text-align: right;
 }
 
 h1.centered {
   text-align: center;
 }
 
-
-
 h2.welcome-title {
-
   padding: 2rem 0;
   background-color: #175369;
   text-align: center;
@@ -103,7 +78,6 @@ p {
   display: block;
   width: 50%;
   margin: auto;
-  // text-align: center;
   box-sizing: border-box;
   border-radius: 100%;
 }
@@ -123,8 +97,6 @@ p {
 .image-height-wrapper {
   display: grid;
   grid-template-rows: 50% auto;
-
-  //
   height: 100%;
 
   a {
@@ -160,12 +132,10 @@ p {
         padding: 1rem;
       a {
         text-decoration: none;
-      // margin: 1rem 0;
       font-size: 1.2em;
       line-height: 1.4em;
       letter-spacing: 0.02em;
       color: #000;
-      // font-weight: bold;
 
       &:hover {
         text-decoration: underline;
@@ -178,7 +148,6 @@ p {
 
 
 .welcome-initial-sidebar {
-  // position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -190,13 +159,11 @@ p {
 }
 
 .subscribe-sidebar {
-  // width: 100%;
   height: 100%;
   display: block;
 
   background-color: #e8f3f7;
   .inner-subscribe-sidebar {
-    // display: block;
     width: 100%;
     box-sizing: border-box;
     margin: auto;
@@ -232,6 +199,25 @@ p {
   padding: 40%;
   background-size: cover;
   background-position: center;
+}
+
+.column-text-card {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  h4 {
+    a {
+      color: #000;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    color: #A0A6AB
+  }
 }
 
 

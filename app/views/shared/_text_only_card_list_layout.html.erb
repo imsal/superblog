@@ -35,7 +35,11 @@
 <div class="row">
   <% iteration.each do |post| %>
   <div class="col-6">
-    <h4 class="column-card-title"><%= link_to post.title, completed_display_post_path(post) %></h4>
+
+    <div class="column-text-card">
+      <h4><%= link_to post.title, completed_display_post_path(post) %></h4>
+      <p><%= post.summary %></p>
+    </div>
   </div>
   <% end %>
 </div>
