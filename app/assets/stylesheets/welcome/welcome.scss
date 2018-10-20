@@ -29,15 +29,23 @@ h1.centered {
 }
 
 h2.welcome-title {
-  padding: 2rem 0;
+  padding: 2.5rem;
   background-color: #175369;
-  text-align: center;
   font-family: "Lobster", cursive;
 
   a {
     text-decoration: none;
     color: #fff;
   }
+
+}
+
+h2.welcome-title-left {
+  text-align: left;
+}
+
+h2.welcome-title-right {
+  text-align: right;
 }
 
 .welcome-subscribe-box-container {
@@ -96,7 +104,20 @@ p {
       background-position: center;
       padding-bottom: 100%;
       box-sizing: border-box;
+
       position: relative;
+
+      -webkit-transition: opacity 0.3s ease;
+      -moz-transition: opacity 0.3s ease;
+      -ms-transition: opacity 0.3s ease;
+      -o-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+
+      -webkit-backface-visibility: hidden;
+
+      &:hover {
+        opacity: 0.85;
+      }
 
       h4 {
         padding: 2rem 0;

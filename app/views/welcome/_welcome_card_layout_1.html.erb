@@ -1,12 +1,8 @@
-<div class="row">
+<h2 class="welcome-title welcome-title-right">
+  <%= link_to category.name, display_category_path(category) %>
+</h2>
 
-  <div class="col-8">
-    <h2 class="welcome-title empty-space"></h2>
-  </div>
-  <div class="col-4">
-    <h2 class="welcome-title"><%= link_to category.name, display_category_path(category) %></h2>
-  </div>
-</div>
+
 
 <div class="row">
 
