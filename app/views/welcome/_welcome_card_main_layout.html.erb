@@ -10,7 +10,7 @@
     <%= render 'subscribe_sidebar', category: category, subscription_message: subscription_message  %>
   <% end %>
 
-
+  <!-- left col featured images -->
   <div class="col-4">
     <div class="image-height-wrapper">
       <% Post.last(2).each do |post| %>
@@ -23,6 +23,7 @@
     </div>
   </div>
 
+  <!-- right col featured images -->
   <div class="col-4">
     <div class="image-height-wrapper">
       <% Post.first(10).last(2).each do |post| %>
