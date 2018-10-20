@@ -108,6 +108,20 @@ p {
       background-position: center;
       padding-bottom: 100%;
       box-sizing: border-box;
+
+      position: relative;
+
+      h4 {
+        padding: 2rem 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+
+        background-color: rgba(0,0,0,0.4);
+        color: #fff;
+      }
     }
   }
 
