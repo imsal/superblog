@@ -47,6 +47,7 @@
           <li><%= link_to post.title, display_post_path(post) %></li>
           <li>900 views</li>
         <% end %>
+          <li><%= link_to 'View More', display_category_path(category), class: 'view-more-link' %></li>
       </ul>
 
     </div>
