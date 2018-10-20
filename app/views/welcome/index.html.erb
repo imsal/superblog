@@ -1,52 +1,7 @@
-<!--
-<div class="row">
-
-  <%# 3.times  do %>
-  <div class="col-4 welcome-initial-sidebar">
-
-
-    <h2 class="welcome-title"><%#= link_to "Some Category", "#" %></h2>
-
-    <%#= image_tag rails_blob_url(Post.last.main_image) %>
-
-    <div class="popular-posts">
-      <ul>
-        <%# Post.last(5).each do |post| %>
-        <li><%#= link_to post.title, display_post_path(post) %></li>
-        <li>900 views</li>
-        <%# end %>
-      </ul>
-    </div>
-
-
-
-  </div>
-
-    <%# end %>
-
-
-
-
-</div>
-
--->
-
-
-
-
-
-
-
-
-
-
-
-
-
 <% Category.main_categories.each_with_index do |category, index| %>
   <% if index % 2 == 0 %>
-    <%= render 'welcome_card_layout_2', category: category %>
+    <%= render 'welcome_card_layout_2', category: category, subscription_message: display_subscription_message(index) %>
   <% else %>
-    <%= render 'welcome_card_layout_1', category: category %>
+    <%= render 'welcome_card_layout_1', category: category, subscription_message: display_subscription_message(index) %>
   <% end %>
 <% end %>

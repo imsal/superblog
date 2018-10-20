@@ -218,13 +218,24 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    h4 {
+      text-align: center;
+      font-size: 1.1em;
+      padding: 2rem;
+    }
+
+
+    .terms-disclaimer {
+      font-style: italic;
+      font-size: 0.8em;
+      text-align: center;
+      padding: 2rem;
+    }
+
   }
 
-  h4 {
-    text-align: center;
-    font-size: 1.1em;
-    padding: 0.5rem;
-  }
+
 
   input[type="text"] {
     width: 100%;

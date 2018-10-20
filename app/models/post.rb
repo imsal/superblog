@@ -48,4 +48,7 @@ class Post < ApplicationRecord
     self.title = title.titleize
   end
 
+
+
+
 end
