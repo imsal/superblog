@@ -1,4 +1,5 @@
 class SubscribersController < ApplicationController
+  before_action :author_must_be_signed_in_to_access, except: [:create]
   before_action :set_subscriber, only: [:show, :edit, :update, :destroy]
 
   # GET /subscribers
@@ -24,11 +25,12 @@ class SubscribersController < ApplicationController
     @subscriber = Subscriber.new(subscriber_params)
 
     if @subscriber.save
+
       @subscriber.send_activation_email
-      # SubscriberMailer.send_subscription_confirmation(@subscriber.email).deliver_now
-      redirect_to @subscriber, notice: 'Subscriber was successfully created.'
+
+      redirect_to root_url, notice: 'Subscriber was successfully created.'
     else
-      render :new
+      redirect_to root_url, alert: 'Subscriber was successfully created.'
     end
   end
 
