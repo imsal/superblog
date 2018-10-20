@@ -115,6 +115,15 @@ $(document).on('turbolinks:load', function() {
   });
 
 
+
+
+  // ~~~~~~~~~~~~~~~~ set pagination to show current in middle with max on ~~~~~~~~~~~~~~~~
+
+  
+
+
+
+
   // ~~~~~~~~~~~~ SET CARDS TO SAME HEIGHT
 
 /*

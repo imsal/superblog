@@ -76,4 +76,4 @@ gem "aws-sdk-s3", require: false
 gem 'tinymce-rails'
 
 
-gem 'will_paginate', '~> 3.1.6'
+gem 'will_paginate', '3.1.0'
