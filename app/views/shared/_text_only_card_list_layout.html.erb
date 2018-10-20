@@ -1,42 +1,13 @@
-
-<!-- Posts -->
-
-
-<!--
-<section id="card-container">
-
-<div id="card-wrapper" class="only-text-cards">
-
-<%# iteration.each do |post| %>
-
-
-<%#= link_to completed_display_post_path(post), class: 'article-link card two-col', data: {created_at: post.created_at.strftime('%Y%m%d'), category: post.category.name, title: post.title, view_count: post.page_count} do %>
-
-<article>
-
-  <div class="card-contents">
-    <h4 class="card-title"><%#= post.title.titleize %></h4>
-    <p><%#= post.summary %></p>
-  </div>
-
-</article>
-<%# end %>
-
-
-<%# end %>
-
-</div>
-</section>
-
-
--->
-
-
 <div class="row">
   <% iteration.each do |post| %>
   <div class="col-6">
 
     <div class="column-text-card">
+
+      <%= link_to completed_display_post_path(post) do %>
+        <div class="small-post-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "300x300") %>)"></div>
+      <% end %>
+
       <h4><%= link_to post.title, completed_display_post_path(post) %></h4>
       <p><%= post.summary %></p>
     </div>
