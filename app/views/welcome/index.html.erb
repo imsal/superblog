@@ -1,7 +1,7 @@
 <% Category.main_categories.each_with_index do |category, index| %>
   <% if index % 2 == 0 %>
-    <%= render 'welcome_card_layout_2', category: category, subscription_message: display_subscription_message(index) %>
+    <%= render 'welcome_card_main_layout', category: category, side: 'left', subscription_message: display_subscription_message(index) %>
   <% else %>
-    <%= render 'welcome_card_layout_1', category: category, subscription_message: display_subscription_message(index) %>
+    <%= render 'welcome_card_main_layout', category: category, side: 'right', subscription_message: display_subscription_message(index) %>
   <% end %>
 <% end %>
