@@ -5,7 +5,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.default_url_options = { :host => 'murmuring-savannah-11483.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'k3urtb3fxydecldddxm4sq.herokuapp.com' }
 
 
 
