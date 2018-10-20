@@ -15,13 +15,11 @@
   <div class="col-4">
 
     <div class="image-height-wrapper">
-      <a href="#">
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)"></div>
-      </a>
-
-      <a href="#">
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'sample_hero.jpg' %>)"></div>
-      </a>
+      <% Post.last(2).each do |post| %>
+        <%= link_to display_post_path(post) do %>
+          <div class="image-half-height" style="background-image: url(<%= rails_blob_url post.main_image %>)"></div>
+        <% end %>
+      <% end %>
     </div>
 
   </div>
@@ -29,13 +27,11 @@
   <div class="col-4">
 
     <div class="image-height-wrapper">
-      <a href="#">
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'about_me.jpg' %>)"></div>
-      </a>
-
-      <a href="#">
-        <div class="image-half-height" style="background-image: url(<%= asset_url 'cat.jpg' %>)"></div>
-      </a>
+      <% Post.first(10).last(2).each do |post| %>
+        <%= link_to display_post_path(post) do %>
+          <div class="image-half-height" style="background-image: url(<%= rails_blob_url post.main_image %>)"></div>
+        <% end %>
+      <% end %>
     </div>
 
   </div>
