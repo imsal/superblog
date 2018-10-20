@@ -36,6 +36,10 @@ h2.welcome-title {
   a {
     text-decoration: none;
     color: #fff;
+
+    &:hover {
+      color: #d8d8d8;
+    }
   }
 
 }
