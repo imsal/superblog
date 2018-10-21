@@ -3,7 +3,7 @@
     <div class="col-6">
       <div class="column-text-card">
         <%= link_to completed_display_post_path(post) do %>
-        <div class="small-post-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: " 300x300") %>)"="300x300") %>)""></div>
+        <div class="small-post-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: " 300x300") %>"></div>
       <% end %>
       <h4><%= link_to post.title, completed_display_post_path(post) %></h4>
       <p><%= post.summary %></p>
