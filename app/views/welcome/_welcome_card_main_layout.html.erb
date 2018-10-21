@@ -8,10 +8,10 @@
   <% end %>
 
   <!-- left col featured images -->
-  <%= render 'single_welcome_card', post: Post.last %>
+  <%= render 'single_welcome_card', post: category.posts.last %>
 
   <!-- right col featured images -->
-  <%= render 'single_welcome_card', post: Post.first %>
+  <%= render 'single_welcome_card', post: category.posts.first %>
 
   <% if side == "right" %>
     <%= render 'top_sidebar', category: category, subscription_message: subscription_message %>
@@ -29,9 +29,9 @@
     <%= render 'bottom_sidebar', category: category, subscription_message: subscription_message %>
   <% end %>
 
-  <%= render 'single_welcome_card', post: Post.last(10).first %>
+  <%= render 'single_welcome_card', post: category.posts.last(3).first %>
 
-  <%= render 'single_welcome_card', post: Post.first(10).last %>
+  <%= render 'single_welcome_card', post: category.posts.first(3).last %>
 
   <% if side == "right" %>
     <%= render 'bottom_sidebar', category: category, subscription_message: subscription_message %>
@@ -39,13 +39,4 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-<%= render 'small_post_image_layout', iteration: Post.last(4) %>
+<%= render 'small_post_image_layout', iteration: category.posts.last(6).first(4) %>
