@@ -29,12 +29,6 @@ $(document).on('turbolinks:load', function() {
 
   setSpacerHeight(); // on init
 
-  $(window).resize(function(){
-    setSpacerHeight();
-  });
-
-
-
   // ~~~~~~~~ Expands/Contracts Mobile Navigation ~~~~~~~~
 
   // resets scrolling upon refresh
@@ -119,7 +113,7 @@ $(document).on('turbolinks:load', function() {
 
   // ~~~~~~~~~~~~~~~~ set pagination to show current in middle with max on ~~~~~~~~~~~~~~~~
 
-  
+
 
 
 
@@ -143,5 +137,28 @@ $(document).on('turbolinks:load', function() {
 
   $(".card-summary").height(maxSummaryHeight);
 */
+
+
+/// ~~~~~~ MAKES WELCOME PAGE CARD ROWS ALL THE SAME SIZE ~~~~~~
+var setWelcomeRowHeights = function() {
+
+  $(".welcome-card-row").height(
+    $("#top-welcome-row-for-height").height()
+  );
+
+}
+
+setWelcomeRowHeights();
+
+
+// ~~~~~ RUN FUNCTIONS BASED OFF OF RESIZE ~~~~~~
+
+$(window).resize(function(){
+  setSpacerHeight();
+  setWelcomeRowHeights();
+});
+
+
+
 
 });

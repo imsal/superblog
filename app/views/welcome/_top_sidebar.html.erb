@@ -1,0 +1,14 @@
+<div class="col-4">
+
+  <div class="popular-posts">
+    <ul>
+      <% Post.last(5).each do |post| %>
+        <li><%= link_to post.title, display_post_path(post) %></li>
+        <li class="post-view-count">900 views</li>
+      <% end %>
+        <li><%= link_to 'View More', display_category_path(category), class: 'view-more-link' %></li>
+    </ul>
+  </div>
+
+
+</div>

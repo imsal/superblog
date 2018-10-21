@@ -1,45 +1,77 @@
-<h2 class="welcome-title welcome-title-<%= side %>">
-  <%= link_to category.name, display_category_path(category) %>
-</h2>
-
-
-
 <div class="row">
+  <% if side == 'left' %>
+    <div class="col-4">
+      <h2 class="welcome-title">
+        <%= link_to category.name, display_category_path(category) %>
+      </h2>
+    </div>
+  <% end %>
+
+  <div class="col-8">
+    <div class="empty-welcome-space"></div>
+  </div>
+
+  <% if side == 'right' %>
+    <div class="col-4">
+      <h2 class="welcome-title">
+        <%= link_to category.name, display_category_path(category) %>
+      </h2>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+<!-- First Row -->
+<div class="row" id="top-welcome-row-for-height">
 
   <% if side == "left" %>
-    <%= render 'subscribe_sidebar', category: category, subscription_message: subscription_message  %>
+    <%= render 'top_sidebar', category: category, subscription_message: subscription_message %>
   <% end %>
 
   <!-- left col featured images -->
-  <div class="col-4">
-    <div class="image-height-wrapper">
-      <% Post.last(2).each do |post| %>
-        <%= link_to display_post_path(post) do %>
-          <div class="image-half-height" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "720x720") %>)">
-            <h4><%= post.title %></h4>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'single_welcome_card', post: Post.last %>
+
+
 
   <!-- right col featured images -->
-  <div class="col-4">
-    <div class="image-height-wrapper">
-      <% Post.first(10).last(2).each do |post| %>
-        <%= link_to display_post_path(post) do %>
-          <div class="image-half-height" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "720x720") %>)">
-            <h4><%= post.title %></h4>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'single_welcome_card', post: Post.first %>
 
   <% if side == "right" %>
-    <%= render 'subscribe_sidebar', category: category, subscription_message: subscription_message %>
+    <%= render 'top_sidebar', category: category, subscription_message: subscription_message %>
   <% end %>
 
 </div>
+
+
+
+
+<!-- Second Row -->
+<div class="row welcome-card-row">
+
+  <% if side == "left" %>
+    <%= render 'bottom_sidebar', category: category, subscription_message: subscription_message %>
+  <% end %>
+
+  <%= render 'single_welcome_card', post: Post.last(10).first %>
+
+  <%= render 'single_welcome_card', post: Post.first(10).last %>
+
+  <% if side == "right" %>
+    <%= render 'bottom_sidebar', category: category, subscription_message: subscription_message %>
+  <% end %>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 <%= render 'small_post_image_layout', iteration: Post.last(4) %>
