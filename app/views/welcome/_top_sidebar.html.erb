@@ -1,5 +1,5 @@
 <div class="col-4">
-  
+
   <div class="popular-posts">
     <ul>
       <% Post.last(5).each do |post| %>
@@ -9,6 +9,7 @@
         <li><%= link_to 'View More', display_category_path(category), class: 'view-more-link' %></li>
     </ul>
   </div>
+
 
 
 </div>
