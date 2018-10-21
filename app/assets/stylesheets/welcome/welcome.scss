@@ -1,33 +1,6 @@
-.left-hero-text,
-.right-hero-text {
-  position: relative;
-  bottom: 0;
-  background-color: rgba(184,64,21, 1);
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-}
-
-section.welcome-page-full-hero {
-  background-image: asset-url('sample_hero.jpg');
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-}
-
-h1.welcome {
-  padding: 1em 1em 0;
-  font-size: 2.8em;
-  text-decoration: underline;
-}
-
-h1.centered {
-  text-align: center;
-}
 
 h2.welcome-title {
-  padding: 2.5rem 3.5rem;
+  padding: 2rem;
   background-color: #175369;
   font-family: "Lobster", cursive;
 
@@ -42,60 +15,9 @@ h2.welcome-title {
 
 }
 
-h2.welcome-title-left {
-  text-align: left;
-}
-
-h2.welcome-title-right {
-  text-align: right;
-}
-
-.welcome-subscribe-box-container {
-  background-color: #e8f3f7;
-  padding: 10rem 0;
-
-  .welcome-subscribe-box {
-    .welcome-subscribe-text {
-      p {
-        text-align: center;
-        font-size: 1.2em;
-
-        span {
-          font-weight: bold;
-        }
-      }
-    }
-
-    .welcome-subscribe-form {
-      text-align: center;
-      margin-top: 2.5rem;
-    }
-  }
-}
-
-p {
-  margin-top: 1rem;
-}
-
-.author-authors {
-  display: block;
-  width: 50%;
-  margin: auto;
-  box-sizing: border-box;
-  border-radius: 100%;
-}
-
-.test_featured_image {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
 .popular-posts {
   background-color: #fff;
-  padding: 2.5rem;
+  padding: 2rem;
 
   h2 {
     margin: 0.5rem 0;
@@ -107,7 +29,8 @@ p {
       padding: 1rem 2rem;
     }
     li {
-      padding: 1rem 1rem 0 1rem;
+      // padding: 1rem 1rem 0 1rem;
+      padding: 0;
 
       a {
         text-decoration: none;
@@ -133,7 +56,7 @@ p {
         background: #B84015;
         color: white;
         font-size: 0.8rem;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
 
         &:hover {
           background: rgba(184, 64, 21, 0.9);
@@ -146,30 +69,15 @@ p {
   }
 }
 
-// .welcome-initial-sidebar {
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: nowrap;
-//
-//   img {
-//     width: 100%;
-//     height: auto;
-//   }
-// }
-
 .subscribe-sidebar {
   height: 100%;
-  // display: block;
   background-color: #e8f3f7;
   position: relative;
 
   .inner-subscribe-sidebar {
-    padding: 2.5rem;
+    padding: 2rem;
     width: 100%;
     box-sizing: border-box;
-    // padding: 0 2.5rem;
-    // margin: auto;
-    // display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -287,6 +195,8 @@ p {
 .link-for-image-wrapper {
   height: 100%;
   width: 100%;
+
+
   display: block;
   .welcome-main-featured-image {
     background-size: cover;
