@@ -53,18 +53,8 @@ if Rails.env == "development"
 
 elsif Rails.env = "production"
 # Category.last(1).each_with_index do
-   Category.all.each_with_index do |sub, index|
-
-    10.times do |x|
-      Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
-          active: true, activation_date: Time.now, tag_list: 'comedy, horror, thriller',
-          summary: 'This is a random summary to type because I cant think of anything else to write', author_id: Author.last.id)
-    end
-
-  end
-
-  # only puts articles on LifeHacks for Heroku limit reasons
-  Category.last(1).each_with_index do |sub, index|
+Category.main_categories.each do |main_cat|
+  main_cat.sub_categories.last(1).each do |sub_cat|
 
     12.times do |x|
       Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
@@ -73,6 +63,20 @@ elsif Rails.env = "production"
     end
 
   end
+end
+
+
+
+  # only puts articles on LifeHacks for Heroku limit reasons
+  # Category.last(1).each_with_index do |sub, index|
+  #
+  #   12.times do |x|
+  #     Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
+  #         active: true, activation_date: Time.now, tag_list: 'comedy, horror, thriller',
+  #         summary: 'This is a random summary to type because I cant think of anything else to write', author_id: Author.last.id)
+  #   end
+  #
+  # end
 
 
 end
