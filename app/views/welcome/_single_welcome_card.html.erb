@@ -1,20 +1,9 @@
 <div class="col-4">
 
     <%= link_to display_post_path(post), class: 'link-for-image-wrapper' do %>
-      <% if post.main_image.attached? %>
-
       <div class="welcome-main-featured-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "720x720") %>)">
         <h4><%= post.title %></h4>
       </div>
-
-    <% else %>
-
-    <div class="welcome-main-featured-image">
-      <h4><%= post.title %></h4>
-    </div>
-
-    <% end %>
-
-        <% end %>
+      <% end %>
 
 </div>
