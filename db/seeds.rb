@@ -57,7 +57,7 @@ Category.main_categories.each do |main_cat|
   main_cat.sub_categories.last(1).each do |sub_cat|
 
     12.times do |x|
-      Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
+      Post.create(title: "Random #{x} Title #{sub_cat.name}", body: post_body, category_id: sub_cat.id,
           active: true, activation_date: Time.now, tag_list: 'comedy, horror, thriller',
           summary: 'This is a random summary to type because I cant think of anything else to write', author_id: Author.last.id)
     end
