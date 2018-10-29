@@ -1,6 +1,6 @@
 <div class="col-4">
 
-    <%= link_to display_post_path(post), class: 'link-for-image-wrapper' do %>
+    <%= link_to completed_display_post_path(post), class: 'link-for-image-wrapper' do %>
       <div class="welcome-main-featured-image" style="background-image: url(<%= rails_representation_url post.main_image.variant(resize: "720x720") %>)">
         <h4><%= post.title %></h4>
       </div>
