@@ -38,6 +38,9 @@ post_body ="<h2>Chapter too parties its letters nor</h2>
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+=begin
+
 if Rails.env == "development"
 
   Category.all.each_with_index do |sub, index|
@@ -52,7 +55,6 @@ if Rails.env == "development"
 
 
 elsif Rails.env = "production"
-# Category.last(1).each_with_index do
 Category.main_categories.each do |main_cat|
   main_cat.sub_categories.last(1).each do |sub_cat|
 
@@ -86,7 +88,6 @@ end
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# end
 
 Post.all.each_with_index do |post, index|
   post.main_image.attach(io: File.open('app/assets/images/stock_images' + "/stock-image-#{(index%14)+1}.jpg"), filename: "/stock-image-#{(index%14)+1}.jpg", content_type: 'image/jpg')
@@ -97,3 +98,7 @@ Post.all.each_with_index do |post, index|
   post.images.attach(io: File.open('app/assets/images/stock_images' + "/stock-image-#{(index%7)+1}.jpg"), filename: "/stock-image-#{(index%7)+1}.jpg", content_type: 'image/jpg')
 
 end
+
+
+
+=end
