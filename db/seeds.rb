@@ -39,13 +39,13 @@ post_body ="<h2>Chapter too parties its letters nor</h2>
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-=begin
+
 
 if Rails.env == "development"
 
   Category.all.each_with_index do |sub, index|
 
-    12.times do |x|
+    5.times do |x|
       Post.create(title: "Random #{x} Title #{sub.name}", body: post_body, category_id: sub.id,
           active: true, activation_date: Time.now, tag_list: 'comedy, horror, thriller',
           summary: 'This is a random summary to type because I cant think of anything else to write', author_id: Author.last.id)
@@ -98,7 +98,3 @@ Post.all.each_with_index do |post, index|
   post.images.attach(io: File.open('app/assets/images/stock_images' + "/stock-image-#{(index%7)+1}.jpg"), filename: "/stock-image-#{(index%7)+1}.jpg", content_type: 'image/jpg')
 
 end
-
-
-
-=end

@@ -5,21 +5,19 @@
 
 <% Category.main_categories.each_with_index do |category, index| %>
 
-  <% Category.where(parent_id: category.id).each_with_index do |sub_category, index| %>
+  <%# Category.where(parent_id: category.id).each do |sub_category| %>
 
-  <% if sub_category.posts.any? %>
+    <%# if sub_category.posts.any? %>
+    <% if category.category_has_posts? %>
 
+      <% if index % 2 == 0 %>
+        <%= render 'welcome_card_main_layout', category: category, side: 'left', subscription_message: display_subscription_message(index) %>
+      <% else %>
+        <%= render 'welcome_card_main_layout', category: category, side: 'right', subscription_message: display_subscription_message(index) %>
+      <% end %>
 
-    <% if index % 2 == 0 %>
-      <%= render 'welcome_card_main_layout', category: sub_category, side: 'left', subscription_message: display_subscription_message(index) %>
-    <% else %>
-      <%= render 'welcome_card_main_layout', category: sub_category, side: 'right', subscription_message: display_subscription_message(index) %>
     <% end %>
-
-
-    <% end %>
-
 
   <% end %>
 
-<% end %>
+<%# end %>
