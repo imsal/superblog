@@ -62,8 +62,25 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.select :category_id, options_from_collection_for_select(Category.all_sub_categories, :id, :name), id: :post_category_id %>
+    <%#= form.select :category_id, options_from_collection_for_select(Category.all_sub_categories, :id, :name), id: :post_category_id %>
+
+    <%= form.grouped_collection_select(:category_id, Category.main_categories, :sub_categories, :name, :id, :name,
+                                    { prompt: 'Select a sub category'},
+                                    { id: :post_category_id, class: 'form-control', }) %>
   </div>
+
+
+  <%#= form.grouped_collection_select(:sub_category_id, Category.all, :sub_categories, :name, :id, :name,
+                                  { prompt: 'Select a sub category'},
+                                  { id: :product_sub_category_id, class: 'form-control', }) %>
+
+
+
+
+
+
+
+
 
   <div class="field">
     <%= form.label :tag_list %>
