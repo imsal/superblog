@@ -32,13 +32,15 @@
     line-height: 2em;
 
     @media only screen and (min-width: 615px) {
-      font-size: 1.15em;
-          line-height: 1.35em;
+      // font-size: 1.15em;
+      // line-height: 1.35em;
+      font-size: 1.2em;
+      line-height: 1.6em;
     }
 
     @media only screen and (min-width: 1180px) {
       font-size: 1.3em;
-          line-height: 1.55em;
+      line-height: 1.55em;
     }
 
 
