@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   def index
-    @categories = Category.order(:id)
+    @main_categories = Category.main_categories.order(:id)#Category.order(:id)
   end
 
   # GET /categories/1

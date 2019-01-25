@@ -7,7 +7,15 @@
 
     <h1>Hi <%= @name %>,</h1>
     <p>We're going to try to get back to you as quickly as possible! In the mean time, check out a few of our latest posts.</p>
+
+    <% @posts.each do |post| %>
+      <%= link_to post.title, completed_display_post_path(post) %> <br/>
+    <% end %>
+
+
+    <p>Your message</p>
+    <p>Created at: <%= @time %></p>
     <p><%= @message %></p>
-    
+
   </body>
 </html>

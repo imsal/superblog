@@ -35,6 +35,10 @@ class Subscriber < ApplicationRecord
     update_columns(activated: true, activated_at: Time.now)
   end
 
+  def de_activate
+    update_columns(activated: false, activated_at: nil)
+  end
+
   def unsubscribe
     update_columns(activated: false, unsubscribed: true, unsubscribed_at: Time.now)
   end

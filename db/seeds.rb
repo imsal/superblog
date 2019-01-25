@@ -2,14 +2,21 @@ Author.create(email_address: 'saltad347@gmail.com', name: 'sal', bio: 'blah', pa
 Author.last.profile_image.attach(io: File.open('app/assets/images/about_me.jpg'), filename: "/about_me.jpg", content_type: 'image/jpg')
 
 
-categories = ['Entertainment', 'Lifestyle', 'Recipes', 'Educational']
+# categories = ['Entertainment', 'Lifestyle', 'Recipes', 'Educational']
+
+categories = ['Business', 'Finance', 'Mindset', 'Resources']
 
 sub_categories = [
-  ['Music', 'Movies', 'TV Shows', 'Music Videos', 'Concerts', 'Podcasts'],
-  ['Financial Planning', 'Home Organization', 'Work / Life Balance', 'Parenting', 'Budgetting', 'Health & Fitness', 'Instruments', 'Self Improvement'],
-  ['Food', 'Alcohol'],
-  ['Recommended Online Courses', 'Recommended Books', 'Recommended eBooks', 'DIY', 'LifeHacks']
+  ['Career Growth', 'Tools', 'Entrepreneurship'],
+  ['Budget', 'Credit', 'Financial Planning', 'Real Estate', 'Personal Investment']
 ]
+
+# sub_categories = [
+#   ['Music', 'Movies', 'TV Shows', 'Music Videos', 'Concerts', 'Podcasts'],
+#   ['Financial Planning', 'Home Organization', 'Work / Life Balance', 'Parenting', 'Budgetting', 'Health & Fitness', 'Instruments', 'Self Improvement'],
+#   ['Food', 'Alcohol'],
+#   ['Recommended Online Courses', 'Recommended Books', 'Recommended eBooks', 'DIY', 'LifeHacks']
+# ]
 
 categories.each_with_index do |cat, index|
   main_cat = Category.create(name: cat)
