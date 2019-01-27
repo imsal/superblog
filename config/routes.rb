@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'session#destroy', as: 'logout'
 
 
-  resources :authors
+  # resources :authors
 
 
   post '/subscribe', to: 'subscribe#create'
@@ -39,7 +39,10 @@ Rails.application.routes.draw do
     resources :categories, param: :slug, except: :show
     resources :inquiries, only: %i[index new create destroy]
     resources :subscribers
+
     
+    resources :authors
+
     # resources :subscribers, only: %i[index edit destroy]
     # get '/subscribers', to: 'subscribers#index'
       end
