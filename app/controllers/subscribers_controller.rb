@@ -22,16 +22,16 @@ class SubscribersController < ApplicationController
 
   # POST /subscribers
   def create
+
     @subscriber = Subscriber.new(subscriber_params)
 
     if @subscriber.save
-
       @subscriber.send_activation_email
-
-      redirect_to root_url, notice: 'Subscriber was successfully created.'
+      redirect_back fallback_location: root_url, notice: 'Subscriber was successfully created.'
     else
-      redirect_to root_url, alert: 'Subscriber was successfully created.'
+        redirect_back fallback_location: root_url, alert: "There was an error: #{@subscriber.errors.full_messages.join(', ').downcase}."
     end
+
   end
 
   # PATCH/PUT /subscribers/1

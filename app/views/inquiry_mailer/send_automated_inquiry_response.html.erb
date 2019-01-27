@@ -9,7 +9,7 @@
     <p>We're going to try to get back to you as quickly as possible! In the mean time, check out a few of our latest posts.</p>
 
     <% @posts.each do |post| %>
-      <%= link_to post.title, completed_display_post_path(post) %> <br/>
+      <%= link_to post.title, "#" %> <br/> <!-- completed_display_post_path(post) -->
     <% end %>
 
 

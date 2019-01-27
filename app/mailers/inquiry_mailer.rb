@@ -1,8 +1,7 @@
 class InquiryMailer < ApplicationMailer
 
-  
-
   def send_automated_inquiry_response(email, name, message, posts)
+
     @name = name
     @message = message
     @posts = posts
