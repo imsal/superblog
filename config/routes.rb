@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  resources :authors, only: :show
+
   # localhost:3000/dashboard/
   scope :dashboard do
     # only viewable to admin
@@ -40,8 +42,8 @@ Rails.application.routes.draw do
     resources :inquiries, only: %i[index new create destroy]
     resources :subscribers
 
-    
-    resources :authors
+
+    resources :authors, except: :show
 
     # resources :subscribers, only: %i[index edit destroy]
     # get '/subscribers', to: 'subscribers#index'

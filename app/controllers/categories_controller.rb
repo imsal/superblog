@@ -2,6 +2,8 @@ class CategoriesController < ApplicationController
 
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
+  before_action :author_must_be_signed_in_to_access
+
   # GET /categories
   def index
     @main_categories = Category.main_categories.order(:id)#Category.order(:id)
